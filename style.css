@@ -1,0 +1,111 @@
+#logo {
+  margin-right: 10px;
+}
+
+section {
+  margin: 50px 0;
+}
+
+h1 {
+  margin: 50px 0;
+}
+
+h3,
+h5 {
+  font-family: 'Oswald';
+}
+
+h3 {
+  margin: 20px 0 30px 0;
+  padding: 15px 20px;
+  border-bottom: 0.5px solid #81848a;
+  font-size: 1.9rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+#section1 h5 {
+  font-size: 1.6rem;
+}
+
+#section3 h5 {
+  font-family: 'Pacifico', cursive;
+  font-size: 1rem;
+}
+
+.embed-responsive-3by2::before {
+  padding-top: calc(3 / 2 * 100%);
+}
+
+figure.lazy-lqip > img {
+  filter: blur(25px);
+  transition: filter 1s;
+  will-change: filter;
+}
+
+figure.lazy-lqip > img.twic-done {
+  filter: blur(0);
+}
+
+#section4 .row {
+  margin-bottom: 74px;
+  padding: 0 15px;
+}
+
+#section4 .figure-container {
+  padding: 0;
+}
+
+figure.lazy-fade > img {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+figure.lazy-fade > img.twic-done {
+  opacity: 1;
+}
+
+.card-img-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(48, 48, 47, 0.2);
+}
+
+.card-img-overlay:hover {
+  cursor: pointer;
+  background: rgba(48, 48, 47, 0.9);
+}
+
+.card-body h5 {
+  margin: 0;
+}
+
+.card-body a:hover {
+  background-color: #545454;
+  border-color: #545454;
+}
+
+.btn-primary {
+  background-color: #292929;
+  border-color: #545454;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 30px;
+  height: 2.4rem;
+  min-height: 2.4rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 27px;
+}
+
+footer {
+  margin-top: 80px;
+  text-align: center;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: grey;
+}
