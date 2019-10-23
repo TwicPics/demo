@@ -48,18 +48,23 @@ figure.lazy-lqip > img.twic-done {
   filter: blur(0);
 }
 
-#section4 .row {
+.clients-pics .row {
   margin-bottom: 74px;
   padding: 0 15px;
 }
 
-#section4 .figure-container {
+.clients-pics .figure-container {
   padding: 0;
 }
 
-figure.lazy-fade > img {
+figure.lazy-fade > img.saturate {
+  filter: saturate(400%);
+}
+
+figure.lazy-fade > img.faded {
   opacity: 0;
   transition: opacity 1s;
+  will-change: opacity;
 }
 
 figure.lazy-fade > img.twic-done {
@@ -107,5 +112,4 @@ footer {
   text-align: center;
   font-size: 0.8rem;
   font-style: italic;
-  color: grey;
 }
