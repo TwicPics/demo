@@ -57,7 +57,11 @@ figure.lazy-lqip > img.twic-done {
   padding: 0;
 }
 
-figure.lazy-fade > img {
+figure.lazy-fade > img.saturate {
+  filter: saturate(400%);
+}
+
+figure.lazy-fade > img.faded {
   opacity: 0;
   transition: opacity 1s;
   will-change: opacity;
