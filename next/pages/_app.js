@@ -1,4 +1,4 @@
-import 'tailwindcss/tailwind.css'
+import "tailwindcss/tailwind.css";
 import { installTwicPics } from "@twicpics/components/react";
 import "@twicpics/components/style.css";
 
@@ -7,7 +7,7 @@ installTwicPics({
 });
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return <Component {...pageProps} />;
 }
 
-export default MyApp
+export default MyApp;

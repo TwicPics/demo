@@ -10,6 +10,7 @@
     "@heroicons/react": "^1.0.4",
     "@tailwindcss/aspect-ratio": "^0.2.1",
     "@tailwindcss/forms": "^0.3.4",
+    "@tailwindcss/typography": "^0.4.1",
     "@twicpics/components": "^0.4.1",
     "next": "latest",
     "prop-types": "^15.7.2",
