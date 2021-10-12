@@ -1,6 +1,7 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import './main.css'
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
+import './main.css';
 
 const app = createApp( App );
 
@@ -10,7 +11,5 @@ import "@twicpics/components/style.css";
 app.use( TwicPics, {
   "domain": `https://demo.twic.pics`
 } );
-
+app.use( router );
 app.mount( `#app` );
-
-// createApp(App).mount('#app')
