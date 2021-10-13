@@ -11,6 +11,11 @@ function Home() {
           </NavLink>
         </li>
         <li>
+          <NavLink className="text-blue-500 hover:underline" to="/products-listing">
+            Products listing
+          </NavLink>
+        </li>
+        <li>
           <NavLink className="text-blue-500 hover:underline" to="/product-overview">
             Product overview
           </NavLink>
