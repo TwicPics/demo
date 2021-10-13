@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Basic HTML/Tailwind starter</title>
+  <link rel="icon" href="favicon.ico" />
+  <meta name="description" content="Basic HTML/Tailwind starter" />
+  <meta name="author" content="Daily Dev Tips" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://assets.twic.pics" />
+  <link rel="stylesheet" href="./css/tailwind.css" />
+  <link rel="stylesheet" href="./css/twicpics.css" />
+
+  <script src="./js/toggle-menus.js"></script>
+  <script async defer src="https://assets.twic.pics/?v1"></script>
+</head>
+
+<body>
+  <!-- This example requires Tailwind CSS v2.0+ -->
+  <div class="flex justify-center p-2 text-white bg-twicpics">
+    <h1 class="flex items-center">
+      <img class="mr-2 h-8 object-contain" src="./images/twicpics-logo.svg" alt="TwicPics logo" />
+      <span class="text-lg font-semibold">website demo</span>
+    </h1>
+  </div>
+
+  <div class="bg-white">
+    <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+      <div class="md:flex md:items-center md:justify-between">
+        <h2 class="text-2xl font-extrabold tracking-tight text-gray-900">Trending products</h2>
+        <a href="#" class="hidden text-sm font-medium text-indigo-600 hover:text-indigo-500 md:block">Shop the
+          collection<span aria-hidden="true"> &rarr;</span></a>
+      </div>
+
+      <div class="mt-6 grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-4 md:gap-y-0 lg:gap-x-8">
+        <div class="group relative">
+          <div class="w-full h-56 bg-gray-200 rounded-md overflow-hidden group-hover:opacity-75 lg:h-72 xl:h-80">
+            <img
+              data-twic-src="image:demo/fake-websites/products-listing/home-page-04-trending-product-02.jpeg"
+              alt="Hand stitched, orange leather long wallet." class="w-full h-full object-center object-cover transition-opacity duration-500 ease-in-out opacity-0">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">
+            <a href="#">
+              <span class="absolute inset-0"></span>
+              Leather Long Wallet
+            </a>
+          </h3>
+          <p class="mt-1 text-sm text-gray-500">Natural</p>
+          <p class="mt-1 text-sm font-medium text-gray-900">$75</p>
+        </div>
+
+        <div class="group relative">
+          <div class="w-full h-56 bg-gray-200 rounded-md overflow-hidden group-hover:opacity-75 lg:h-72 xl:h-80">
+            <img
+              data-twic-src="image:demo/fake-websites/products-listing/home-page-04-trending-product-03.jpeg"
+              alt="" class="w-full h-full object-center object-cover transition-opacity duration-500 ease-in-out opacity-0">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">
+            <a href="#">
+              <span class="absolute inset-0"></span>
+              Machined Pencil & Pen Set
+            </a>
+          </h3>
+          <p class="mt-1 text-sm text-gray-500">Black</p>
+          <p class="mt-1 text-sm font-medium text-gray-900">$70</p>
+        </div>
+
+        <div class="group relative">
+          <div class="w-full h-56 bg-gray-200 rounded-md overflow-hidden group-hover:opacity-75 lg:h-72 xl:h-80">
+            <img
+              data-twic-src="image:demo/fake-websites/products-listing/home-page-04-trending-product-04.jpeg"
+              alt="" class="w-full h-full object-center object-cover transition-opacity duration-500 ease-in-out opacity-0">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">
+            <a href="#">
+              <span class="absolute inset-0"></span>
+              Mini-Sketchbooks
+            </a>
+          </h3>
+          <p class="mt-1 text-sm text-gray-500">Light Brown</p>
+          <p class="mt-1 text-sm font-medium text-gray-900">$27</p>
+        </div>
+
+        <div class="group relative">
+          <div class="w-full h-56 bg-gray-200 rounded-md overflow-hidden group-hover:opacity-75 lg:h-72 xl:h-80">
+            <img
+              data-twic-src="image:demo/fake-websites/products-listing/home-page-04-trending-product-01.jpeg"
+              alt="" class="w-full h-full object-center object-cover transition-opacity duration-500 ease-in-out opacity-0">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">
+            <a href="#">
+              <span class="absolute inset-0"></span>
+              Organizer Set
+            </a>
+          </h3>
+          <p class="mt-1 text-sm text-gray-500">Walnut</p>
+          <p class="mt-1 text-sm font-medium text-gray-900">$149</p>
+        </div>
+      </div>
+
+      <div class="mt-8 text-sm md:hidden">
+        <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Shop the collection<span
+            aria-hidden="true"> &rarr;</span></a>
+      </div>
+    </div>
+
+    <div class="max-w-2xl mx-auto py-16 px-4 sm:pt-6 sm:pb-24 sm:px-6 lg:max-w-7xl lg:px-8">
+      <h2 class="text-2xl font-extrabold tracking-tight text-gray-900">Products</h2>
+
+      <div class="mt-6 grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+        <a href="#" class="group">
+          <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+            <img data-twic-src="image:demo/fake-websites/products-listing/category-page-04-image-card-01.jpeg"
+              alt="Tall slender porcelain bottle with natural clay textured body and cork stopper."
+              class="w-full h-full object-center object-cover transition-opacity duration-500 ease-in-out opacity-0">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">
+            Earthen Bottle
+          </h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">
+            $48
+          </p>
+        </a>
+
+        <a href="#" class="group">
+          <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+            <img data-twic-src="image:demo/fake-websites/products-listing/category-page-04-image-card-02.jpeg"
+              alt="Olive drab green insulated bottle with flared screw lid and flat top."
+              class="w-full h-full object-center object-cover transition-opacity duration-500 ease-in-out opacity-0">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">
+            Nomad Tumbler
+          </h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">
+            $35
+          </p>
+        </a>
+
+        <a href="#" class="group">
+          <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+            <img data-twic-src="image:demo/fake-websites/products-listing/category-page-04-image-card-03.jpeg"
+              alt="Person using a pen to cross a task off a productivity paper card."
+              class="w-full h-full object-center object-cover transition-opacity duration-500 ease-in-out opacity-0">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">
+            Focus Paper Refill
+          </h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">
+            $89
+          </p>
+        </a>
+
+        <a href="#" class="group">
+          <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+            <img data-twic-src="image:demo/fake-websites/products-listing/category-page-04-image-card-04.jpeg"
+              alt="Hand holding black machined steel mechanical pencil with brass tip and top."
+              class="w-full h-full object-center object-cover transition-opacity duration-500 ease-in-out opacity-0">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">
+            Machined Mechanical Pencil
+          </h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">
+            $35
+          </p>
+        </a>
+
+        <a href="#" class="group">
+          <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+            <img
+              data-twic-src="image:demo/fake-websites/products-listing/category-page-04-image-card-05.jpeg"
+              alt="Hand holding black machined steel mechanical pencil with brass tip and top."
+              class="w-full h-full object-center object-cover transition-opacity duration-500 ease-in-out opacity-0">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">
+            Focus Card Tray
+          </h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">
+            $64
+          </p>
+        </a>
+
+        <a href="#" class="group">
+          <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+            <img
+              data-twic-src="image:demo/fake-websites/products-listing/category-page-04-image-card-06.jpeg"
+              alt="Hand holding black machined steel mechanical pencil with brass tip and top."
+              class="w-full h-full object-center object-cover transition-opacity duration-500 ease-in-out opacity-0">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">
+            Focus Multi-Pack
+          </h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">
+            $39
+          </p>
+        </a>
+
+        <a href="#" class="group">
+          <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+            <img
+              data-twic-src="image:demo/fake-websites/products-listing/category-page-04-image-card-07.jpeg"
+              alt="Hand holding black machined steel mechanical pencil with brass tip and top."
+              class="w-full h-full object-center object-cover transition-opacity duration-500 ease-in-out opacity-0">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">
+            Brass Scissors
+          </h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">
+            $50
+          </p>
+        </a>
+
+        <a href="#" class="group">
+          <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+            <img
+              data-twic-src="image:demo/fake-websites/products-listing/category-page-04-image-card-08.jpeg"
+              alt="Hand holding black machined steel mechanical pencil with brass tip and top."
+              class="w-full h-full object-center object-cover transition-opacity duration-500 ease-in-out opacity-0">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">
+            Focus Carry Pouch
+          </h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">
+            $32
+          </p>
+        </a>
+
+        <a href="#" class="group">
+          <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+            <img data-twic-src="image:demo/fake-websites/products-listing/home-page-02-product-01.jpeg"
+              alt="Hand holding black machined steel mechanical pencil with brass tip and top."
+              class="w-full h-full object-center object-cover transition-opacity duration-500 ease-in-out opacity-0">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">
+            Machined Pen
+          </h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">
+            $35
+          </p>
+        </a>
+
+        <a href="#" class="group">
+          <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+            <img data-twic-src="image:demo/fake-websites/products-listing/home-page-02-product-02.jpeg"
+              alt="Hand holding black machined steel mechanical pencil with brass tip and top."
+              class="w-full h-full object-center object-cover transition-opacity duration-500 ease-in-out opacity-0">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">
+            Earthen Mug
+          </h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">
+            $28
+          </p>
+        </a>
+
+        <a href="#" class="group">
+          <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+            <img data-twic-src="image:demo/fake-websites/products-listing/home-page-02-product-03.jpeg"
+              alt="Hand holding black machined steel mechanical pencil with brass tip and top."
+              class="w-full h-full object-center object-cover transition-opacity duration-500 ease-in-out opacity-0">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">
+            Leatherbound Daily Journal Set
+          </h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">
+            $50
+          </p>
+        </a>
+
+        <a href="#" class="group">
+          <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+            <img data-twic-src="image:demo/fake-websites/products-listing/home-page-02-product-04.jpeg"
+              alt="Hand holding black machined steel mechanical pencil with brass tip and top."
+              class="w-full h-full object-center object-cover transition-opacity duration-500 ease-in-out opacity-0">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">
+            Leatherbound Daily Journal
+          </h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">
+            $40
+          </p>
+        </a>
+
+        <a href="#" class="group">
+          <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+            <img
+              data-twic-src="image:demo/fake-websites/products-listing/category-page-05-image-card-01.jpeg"
+              alt="Hand holding black machined steel mechanical pencil with brass tip and top."
+              class="w-full h-full object-center object-cover transition-opacity duration-500 ease-in-out opacity-0">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">
+            Organic Basic Set
+          </h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">
+            $149
+          </p>
+        </a>
+
+        <a href="#" class="group">
+          <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+            <img
+              data-twic-src="image:demo/fake-websites/products-listing/category-page-05-image-card-07.jpeg"
+              alt="Hand holding black machined steel mechanical pencil with brass tip and top."
+              class="w-full h-full object-center object-cover transition-opacity duration-500 ease-in-out opacity-0">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">
+            Out and About Bottle
+          </h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">
+            $25
+          </p>
+        </a>
+
+        <a href="#" class="group">
+          <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+            <img
+              data-twic-src="image:demo/fake-websites/products-listing/category-page-05-image-card-08.jpeg"
+              alt="Hand holding black machined steel mechanical pencil with brass tip and top."
+              class="w-full h-full object-center object-cover transition-opacity duration-500 ease-in-out opacity-0">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">
+            Daily Notebook Refill Pack
+          </h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">
+            $14
+          </p>
+        </a>
+
+        <a href="#" class="group">
+          <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+            <img
+              data-twic-src="image:demo/fake-websites/products-listing/category-page-05-image-card-06.jpeg"
+              alt="Hand holding black machined steel mechanical pencil with brass tip and top."
+              class="w-full h-full object-center object-cover transition-opacity duration-500 ease-in-out opacity-0">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">
+            Organize Basic Set
+          </h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">
+            $149
+          </p>
+        </a>
+      </div>
+    </div>
+
+    <div class="max-w-2xl mx-auto py-16 px-4 sm:pt-6 sm:pb-24 sm:px-6 lg:max-w-7xl lg:px-8">
+      <h2 class="text-2xl font-extrabold tracking-tight text-gray-900">Our favorites</h2>
+
+      <div class="mt-6 grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:gap-x-8">
+        <a href="#" class="group">
+          <div class="w-full aspect-w-1 aspect-h-1 rounded-lg overflow-hidden sm:aspect-w-2 sm:aspect-h-3">
+            <img data-twic-src="image:demo/fake-websites/products-listing/category-page-01-image-card-01.jpeg"
+              alt="Person using a pen to cross a task off a productivity paper card."
+              class="w-full h-full object-center object-cover transition-opacity duration-500 ease-in-out opacity-0">
+          </div>
+          <div class="mt-4 flex items-center justify-between text-base font-medium text-gray-900">
+            <h3>
+              Focus Paper Refill
+            </h3>
+            <p>
+              $13
+            </p>
+          </div>
+          <p class="mt-1 text-sm italic text-gray-500">
+            3 sizes available
+          </p>
+        </a>
+
+        <a href="#" class="group">
+          <div class="w-full aspect-w-1 aspect-h-1 rounded-lg overflow-hidden sm:aspect-w-2 sm:aspect-h-3">
+            <img data-twic-src="image:demo/fake-websites/products-listing/category-page-01-image-card-02.jpeg"
+              alt="Paper card sitting upright in walnut card holder on desk."
+              class="w-full h-full object-center object-cover transition-opacity duration-500 ease-in-out opacity-0">
+          </div>
+          <div class="mt-4 flex items-center justify-between text-base font-medium text-gray-900">
+            <h3>
+              Focus Card Holder
+            </h3>
+            <p>
+              $64
+            </p>
+          </div>
+          <p class="mt-1 text-sm italic text-gray-500">
+            Walnut
+          </p>
+        </a>
+
+        <a href="#" class="group">
+          <div class="w-full aspect-w-1 aspect-h-1 rounded-lg overflow-hidden sm:aspect-w-2 sm:aspect-h-3">
+            <img data-twic-src="image:demo/fake-websites/products-listing/category-page-01-image-card-03.jpeg"
+              alt="Textured gray felt pouch for paper cards with snap button flap and elastic pen holder loop."
+              class="w-full h-full object-center object-cover transition-opacity duration-500 ease-in-out opacity-0">
+          </div>
+          <div class="mt-4 flex items-center justify-between text-base font-medium text-gray-900">
+            <h3>
+              Focus Carry Case
+            </h3>
+            <p>
+              $32
+            </p>
+          </div>
+          <p class="mt-1 text-sm italic text-gray-500">
+            Heather Gray
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
