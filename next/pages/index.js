@@ -16,7 +16,12 @@ function HomePage() {
             <a className="text-blue-500 hover:underline">Storefront</a>
           </Link>
         </li>
-				<li>
+        <li>
+          <Link href="/products-listing">
+            <a className="text-blue-500 hover:underline">Products listing</a>
+          </Link>
+        </li>
+        <li>
           <Link href="/product-overview">
             <a className="text-blue-500 hover:underline">Product overview</a>
           </Link>
