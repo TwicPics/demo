@@ -1,6 +1,21 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
   <div class="bg-white">
+    <div class="flex justify-center text-white bg-twicpics">
+      <h1 class="flex items-center">
+        <img
+          class="h-8 object-contain"
+          src="../assets/twicpics-logo.svg"
+          alt="TwicPics logo"
+        />
+        <span class="ml-3 mr-1">x</span>
+        <img
+          class="h-12 object-contain"
+          src="../assets/vue-logo.png"
+          alt="Vue.JS logo"
+        />
+      </h1>
+    </div>
     <div
       class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8"
     >
