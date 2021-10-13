@@ -10,6 +10,13 @@
       <li>
         <router-link
           className="text-blue-500 hover:underline"
+          to="/products-listing"
+          >Products listing</router-link
+        >
+      </li>
+      <li>
+        <router-link
+          className="text-blue-500 hover:underline"
           to="/product-overview"
           >Product overview</router-link
         >
