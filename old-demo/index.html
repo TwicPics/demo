@@ -3,46 +3,48 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>TwicPics usecase</title>
+  <title>TwicPics Demonstration Store</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="This website is unoffical and developed for TwicPics demonstration purposes" />
 
   <link rel="dns-prefetch" href="https://assets.twic.pics" />
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://code.jquery.com" />
 
-  <link rel="preload" as="image" media="(max-width: 767px)"
-    href="https://assets.twic.pics/examples/banner1.jpg?twic=v1/cover=16:9/resize=900" imagesrcset="https://assets.twic.pics/examples/banner1.jpg?twic=v1/cover=1:1/resize=500 500w,
-                     https://assets.twic.pics/examples/banner1.jpg?twic=v1/cover=1:1/resize=600 600w,
-                     https://assets.twic.pics/examples/banner1.jpg?twic=v1/cover=1:1/resize=700 700w,
-                     https://assets.twic.pics/examples/banner1.jpg?twic=v1/cover=1:1/resize=800 800w" />
+  <link rel="preload" as="image" media="(max-width: 767px)" href="https://assets.twic.pics/examples/banner1.jpg?twic=v1/focus=auto/cover=16:9/resize=900"
+    imagesrcset="https://assets.twic.pics/examples/banner1.jpg?twic=v1/focus=auto/cover=1:1/resize=500 500w,
+                 https://assets.twic.pics/examples/banner1.jpg?twic=v1/focus=auto/cover=1:1/resize=600 600w,
+                 https://assets.twic.pics/examples/banner1.jpg?twic=v1/focus=auto/cover=1:1/resize=700 700w,
+                 https://assets.twic.pics/examples/banner1.jpg?twic=v1/focus=auto/cover=1:1/resize=800 800w" />
 
-  <link rel="preload" as="image" media="(min-width: 768px) and (max-width: 991px)"
-    href="https://assets.twic.pics/examples/banner1.jpg?twic=v1/cover=16:9/resize=900" imagesrcset="https://assets.twic.pics/examples/banner1.jpg?twic=v1/cover=16:9/resize=800 800w,
-                     https://assets.twic.pics/examples/banner1.jpg?twic=v1/cover=16:9/resize=1000 1000w,
-                     https://assets.twic.pics/examples/banner1.jpg?twic=v1/cover=16:9/resize=1200 1200w" />
+  <link rel="preload" as="image" media="(min-width: 768px) and (max-width: 991px)" href="https://assets.twic.pics/examples/banner1.jpg?twic=v1/focus=auto/cover=16:9/resize=900"
+    imagesrcset="https://assets.twic.pics/examples/banner1.jpg?twic=v1/focus=auto/cover=16:9/resize=800 800w,
+                 https://assets.twic.pics/examples/banner1.jpg?twic=v1/focus=auto/cover=16:9/resize=1000 1000w,
+                 https://assets.twic.pics/examples/banner1.jpg?twic=v1/focus=auto/cover=16:9/resize=1200 1200w" />
 
-  <link rel="preload" as="image" media="(min-width: 992px)"
-    href="https://assets.twic.pics/examples/banner1.jpg?twic=v1/cover=16:9/resize=900" imagesrcset="https://assets.twic.pics/examples/banner1.jpg?twic=v1/focus=50px0/cover=11:4/resize=1000 1000w,
-                     https://assets.twic.pics/examples/banner1.jpg?twic=v1/focus=50px0/cover=11:4/resize=1500 1500w,
-                     https://assets.twic.pics/examples/banner1.jpg?twic=v1/focus=50px0/cover=11:4/resize=1900 1900w" />
+  <link rel="preload" as="image" media="(min-width: 992px)" href="https://assets.twic.pics/examples/banner1.jpg?twic=v1/focus=auto/cover=16:9/resize=900"
+    imagesrcset="https://assets.twic.pics/examples/banner1.jpg?twic=v1/focus=auto/cover=11:4/resize=1000 1000w,
+                 https://assets.twic.pics/examples/banner1.jpg?twic=v1/focus=auto/cover=11:4/resize=1500 1500w,
+                 https://assets.twic.pics/examples/banner1.jpg?twic=v1/focus=auto/cover=11:4/resize=1900 1900w" />
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald&amp;display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico&amp;display=swap" />
   <link rel="stylesheet" href="style.css" />
+
+  <script async src="https://assets.twic.pics/v1/script"></script>
 </head>
 
 <body>
-  <!-- partial:index.partial.html -->
   <header>
     <div>
       <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <img id="logo" src="logo.svg" width="55" height="55" class="d-inline-block align-top" alt="Logo" />
+        <img src="logo.svg" width="55" height="55" class="d-inline-block align-top mr-2" alt="Logo" />
         <a class="navbar-brand" href="#">
           Brand name
         </a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -70,38 +72,42 @@
         </div>
       </nav>
     </div>
+  </header>
 
-    <!--   <div> -->
-    <div class="bd-example">
-      <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+  <main>
+
+    <!--  SECTION Banner  -->
+    <section>
+      <div id="headerCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
-          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+          <li data-target="#headerCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#headerCarousel" data-slide-to="1"></li>
+          <li data-target="#headerCarousel" data-slide-to="2"></li>
         </ol>
 
         <div class="carousel-inner">
           <div class="carousel-item active">
             <picture>
               <source media="(max-width: 767px)" srcset="
-                    https://assets.twic.pics/examples/banner1.jpg?twic=v1/cover=1:1/resize=500 500w,
-                    https://assets.twic.pics/examples/banner1.jpg?twic=v1/cover=1:1/resize=600 600w,
-                    https://assets.twic.pics/examples/banner1.jpg?twic=v1/cover=1:1/resize=700 700w,
-                    https://assets.twic.pics/examples/banner1.jpg?twic=v1/cover=1:1/resize=800 800w,
+                    https://assets.twic.pics/examples/banner1.jpg?twic=v1/focus=auto/cover=1:1/resize=500 500w,
+                    https://assets.twic.pics/examples/banner1.jpg?twic=v1/focus=auto/cover=1:1/resize=600 600w,
+                    https://assets.twic.pics/examples/banner1.jpg?twic=v1/focus=auto/cover=1:1/resize=700 700w,
+                    https://assets.twic.pics/examples/banner1.jpg?twic=v1/focus=auto/cover=1:1/resize=800 800w,
                   " />
               <source media="(min-width: 992px)" srcset="
-                    https://assets.twic.pics/examples/banner1.jpg?twic=v1/cover=11:4/resize=1000 1000w,
-                    https://assets.twic.pics/examples/banner1.jpg?twic=v1/cover=11:4/resize=1500 1500w,
-                    https://assets.twic.pics/examples/banner1.jpg?twic=v1/cover=11:4/resize=1900 1900w
+                    https://assets.twic.pics/examples/banner1.jpg?twic=v1/focus=auto/cover=11:4/resize=1000 1000w,
+                    https://assets.twic.pics/examples/banner1.jpg?twic=v1/focus=auto/cover=11:4/resize=1500 1500w,
+                    https://assets.twic.pics/examples/banner1.jpg?twic=v1/focus=auto/cover=11:4/resize=1900 1900w
                   " />
               <source media="(min-width: 768px)" srcset="
-                    https://assets.twic.pics/examples/banner1.jpg?twic=v1/cover=16:9/resize=800 800w,
-                    https://assets.twic.pics/examples/banner1.jpg?twic=v1/cover=16:9/resize=1000 1000w,
-                    https://assets.twic.pics/examples/banner1.jpg?twic=v1/cover=16:9/resize=1200 1200w
+                    https://assets.twic.pics/examples/banner1.jpg?twic=v1/focus=auto/cover=16:9/resize=800 800w,
+                    https://assets.twic.pics/examples/banner1.jpg?twic=v1/focus=auto/cover=16:9/resize=1000 1000w,
+                    https://assets.twic.pics/examples/banner1.jpg?twic=v1/focus=auto/cover=16:9/resize=1200 1200w
                   " />
-              <img src="https://assets.twic.pics/examples/banner1.jpg?twic=v1/cover=16:9/resize=900"
-                class="d-block w-100" alt="..." />
+              <img src="https://assets.twic.pics/examples/banner1.jpg?twic=v1/focus=auto/cover=16:9/resize=900" class="d-block w-100" alt="..." />
             </picture>
+
+            <div class="carousel-overlay"></div>
 
             <div class="carousel-caption d-none d-md-block">
               <h5>First slide label</h5>
@@ -114,24 +120,25 @@
           <div class="carousel-item">
             <picture>
               <source media="(max-width: 767px)" srcset="
-                    https://assets.twic.pics/examples/banner5.jpg?twic=v1/cover=1:1/resize=500 500w,
-                    https://assets.twic.pics/examples/banner5.jpg?twic=v1/cover=1:1/resize=600 600w,
-                    https://assets.twic.pics/examples/banner5.jpg?twic=v1/cover=1:1/resize=700 700w,
-                    https://assets.twic.pics/examples/banner5.jpg?twic=v1/cover=1:1/resize=800 800w,
+                    https://assets.twic.pics/examples/banner5.jpg?twic=v1/focus=auto/cover=1:1/resize=500 500w,
+                    https://assets.twic.pics/examples/banner5.jpg?twic=v1/focus=auto/cover=1:1/resize=600 600w,
+                    https://assets.twic.pics/examples/banner5.jpg?twic=v1/focus=auto/cover=1:1/resize=700 700w,
+                    https://assets.twic.pics/examples/banner5.jpg?twic=v1/focus=auto/cover=1:1/resize=800 800w,
                   " />
               <source media="(min-width: 992px)" srcset="
-                    https://assets.twic.pics/examples/banner5.jpg?twic=v1/focus=50px0/cover=11:4/resize=1000 1000w,
-                    https://assets.twic.pics/examples/banner5.jpg?twic=v1/focus=50px0/cover=11:4/resize=1500 1500w,
-                    https://assets.twic.pics/examples/banner5.jpg?twic=v1/focus=50px0/cover=11:4/resize=1900 1900w
+                    https://assets.twic.pics/examples/banner5.jpg?twic=v1/focus=auto/cover=11:4/resize=1000 1000w,
+                    https://assets.twic.pics/examples/banner5.jpg?twic=v1/focus=auto/cover=11:4/resize=1500 1500w,
+                    https://assets.twic.pics/examples/banner5.jpg?twic=v1/focus=auto/cover=11:4/resize=1900 1900w
                   " />
               <source media="(min-width: 768px)" srcset="
-                    https://assets.twic.pics/examples/banner5.jpg?twic=v1/focus=25px0/cover=16:9/resize=800 800w,
-                    https://assets.twic.pics/examples/banner5.jpg?twic=v1/focus=25px0/cover=16:9/resize=1000 1000w,
-                    https://assets.twic.pics/examples/banner5.jpg?twic=v1/focus=25px0/cover=16:9/resize=1200 1200w
+                    https://assets.twic.pics/examples/banner5.jpg?twic=v1/focus=auto/cover=16:9/resize=800 800w,
+                    https://assets.twic.pics/examples/banner5.jpg?twic=v1/focus=auto/cover=16:9/resize=1000 1000w,
+                    https://assets.twic.pics/examples/banner5.jpg?twic=v1/focus=auto/cover=16:9/resize=1200 1200w
                   " />
-              <img src="https://assets.twic.pics/examples/banner5.jpg?twic=v1/cover=16:9/resize=900"
-                class="d-block w-100" alt="..." />
+              <img src="https://assets.twic.pics/examples/banner5.jpg?twic=v1/focus=auto/cover=16:9/resize=900" class="d-block w-100" alt="..." />
             </picture>
+
+            <div class="carousel-overlay"></div>
 
             <div class="carousel-caption d-none d-md-block">
               <h5>Second slide label</h5>
@@ -142,24 +149,25 @@
           <div class="carousel-item">
             <picture>
               <source media="(max-width: 767px)" srcset="
-                    https://assets.twic.pics/examples/banner2.jpg?twic=v1/cover=1:1/resize=500 500w,
-                    https://assets.twic.pics/examples/banner2.jpg?twic=v1/cover=1:1/resize=600 600w,
-                    https://assets.twic.pics/examples/banner2.jpg?twic=v1/cover=1:1/resize=700 700w,
-                    https://assets.twic.pics/examples/banner2.jpg?twic=v1/cover=1:1/resize=800 800w,
+                    https://assets.twic.pics/examples/banner2.jpg?twic=v1/focus=auto/cover=1:1/resize=500 500w,
+                    https://assets.twic.pics/examples/banner2.jpg?twic=v1/focus=auto/cover=1:1/resize=600 600w,
+                    https://assets.twic.pics/examples/banner2.jpg?twic=v1/focus=auto/cover=1:1/resize=700 700w,
+                    https://assets.twic.pics/examples/banner2.jpg?twic=v1/focus=auto/cover=1:1/resize=800 800w,
                   " />
               <source media="(min-width: 992px)" srcset="
-                    https://assets.twic.pics/examples/banner2.jpg?twic=v1/cover=11:4/resize=1000 1000w,
-                    https://assets.twic.pics/examples/banner2.jpg?twic=v1/cover=11:4/resize=1500 1500w,
-                    https://assets.twic.pics/examples/banner2.jpg?twic=v1/cover=11:4/resize=1900 1900w
+                    https://assets.twic.pics/examples/banner2.jpg?twic=v1/focus=auto/cover=11:4/resize=1000 1000w,
+                    https://assets.twic.pics/examples/banner2.jpg?twic=v1/focus=auto/cover=11:4/resize=1500 1500w,
+                    https://assets.twic.pics/examples/banner2.jpg?twic=v1/focus=auto/cover=11:4/resize=1900 1900w
                   " />
               <source media="(min-width: 768px)" srcset="
-                    https://assets.twic.pics/examples/banner2.jpg?twic=v1/cover=16:9/resize=800 800w,
-                    https://assets.twic.pics/examples/banner2.jpg?twic=v1/cover=16:9/resize=1000 1000w,
-                    https://assets.twic.pics/examples/banner2.jpg?twic=v1/cover=16:9/resize=1200 1200w
+                    https://assets.twic.pics/examples/banner2.jpg?twic=v1/focus=auto/cover=16:9/resize=800 800w,
+                    https://assets.twic.pics/examples/banner2.jpg?twic=v1/focus=auto/cover=16:9/resize=1000 1000w,
+                    https://assets.twic.pics/examples/banner2.jpg?twic=v1/focus=auto/cover=16:9/resize=1200 1200w
                   " />
-              <img class="d-block w-100"
-                src="https://assets.twic.pics/examples/banner2.jpg?twic=v1/cover=16:9/resize=900" alt="..." />
+              <img class="d-block w-100" src="https://assets.twic.pics/examples/banner2.jpg?twic=v1/focus=auto/cover=16:9/resize=900" alt="..." />
             </picture>
+
+            <div class="carousel-overlay"></div>
 
             <div class="carousel-caption d-none d-md-block">
               <h5>Third slide label</h5>
@@ -171,92 +179,72 @@
           </div>
         </div>
 
-        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <a class="carousel-control-prev" href="#headerCarousel" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <a class="carousel-control-next" href="#headerCarousel" role="button" data-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
       </div>
-    </div>
-  </header>
+    </section>
 
-  <main>
     <!--  SECTION 1  -->
-    <section id="section1" class="container">
-      <h3>Trending Now</h3>
+    <section class="container my-5">
+      <h3 class="section-title">Trending Now</h3>
 
       <div class="row">
         <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-          <div class="card text-white embed-responsive embed-responsive-1by1">
-            <img class="twic card-img embed-responsive-item"
-              src="https://assets.twic.pics/examples/cat9.jpeg?twic=v1/cover=300x300"
-              data-src="image:examples/cat9.jpeg" data-src-transform="focus=50px0/cover" loading="lazy" width="300"
-              height="300" alt="..." />
-            <div class="card-img-overlay">
-              <h5 class="card-title">SHIRTS</h5>
+          <div class="card text-white embed-responsive embed-responsive-1by1 product-img-wrapper product-img-wrapper-overlay">
+            <img class="card-img embed-responsive-item product-img" src="https://assets.twic.pics/examples/cat9.jpeg?twic=v1/cover=300x300" data-twic-src="image:examples/cat9.jpeg" width="300" height="300" alt="..." />
+            <div class="card-img-overlay product-img-overlay">
+              <h4 class="card-title product-title m-0">SHIRTS</h4>
             </div>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-          <div class="card text-white embed-responsive embed-responsive-1by1">
-            <img class="twic card-img embed-responsive-item"
-              src="https://assets.twic.pics/examples/cat6.jpeg?twic=v1/cover=300x300"
-              data-src="image:examples/cat6.jpeg" data-src-transform="cover" loading="lazy" width="300" height="300"
-              alt="..." />
-            <div class="card-img-overlay">
-              <h5 class="card-title">PANTS</h5>
+          <div class="card text-white embed-responsive embed-responsive-1by1 product-img-wrapper product-img-wrapper-overlay">
+            <img class="card-img embed-responsive-item product-img" src="https://assets.twic.pics/examples/cat6.jpeg?twic=v1/cover=300x300" data-twic-src="image:examples/cat6.jpeg" width="300" height="300" alt="..." />
+            <div class="card-img-overlay product-img-overlay">
+              <h4 class="card-title product-title m-0">PANTS</h4>
             </div>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-          <div class="card text-white embed-responsive embed-responsive-1by1">
-            <img class="twic card-img embed-responsive-item"
-              src="https://assets.twic.pics/examples/cat12.jpeg?twic=v1/cover=300x300"
-              data-src="image:examples/cat12.jpeg" data-src-transform="cover" loading="lazy" width="300" height="300"
-              alt="..." />
-            <div class="card-img-overlay">
-              <h5 class="card-title">SWEAT-SHIRTS</h5>
+          <div class="card text-white embed-responsive embed-responsive-1by1 product-img-wrapper product-img-wrapper-overlay">
+            <img class="card-img embed-responsive-item product-img" src="https://assets.twic.pics/examples/cat12.jpeg?twic=v1/cover=300x300" data-twic-src="image:examples/cat12.jpeg" width="300" height="300" alt="..." />
+            <div class="card-img-overlay product-img-overlay">
+              <h4 class="card-title product-title m-0">SWEAT-SHIRTS</h4>
             </div>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-          <div class="card text-white embed-responsive embed-responsive-1by1">
-            <img class="twic card-img embed-responsive-item"
-              src="https://assets.twic.pics/examples/img10.jpg?twic=v1/cover=300x300"
-              data-src="image:examples/img10.jpg" data-src-transform="focus=0x60p/cover" loading="lazy" width="300"
-              height="300" alt="..." />
-            <div class="card-img-overlay">
-              <h5 class="card-title">SHOES</h5>
+          <div class="card text-white embed-responsive embed-responsive-1by1 product-img-wrapper product-img-wrapper-overlay">
+            <img class="card-img embed-responsive-item product-img" src="https://assets.twic.pics/examples/img10.jpg?twic=v1/cover=300x300" data-twic-src="image:examples/img10.jpg" width="300" height="300" alt="..." />
+            <div class="card-img-overlay product-img-overlay">
+              <h4 class="card-title product-title m-0">SHOES</h4>
             </div>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-          <div class="card text-white embed-responsive embed-responsive-1by1">
-            <img class="twic card-img embed-responsive-item"
-              src="https://assets.twic.pics/examples/cat10.jpeg?twic=v1/cover=300x300"
-              data-src="image:examples/cat10.jpeg" data-src-transform="focus=50px52p/cover" loading="lazy" width="300"
-              height="300" alt="..." />
-            <div class="card-img-overlay">
-              <h5 class="card-title">BAGS</h5>
+          <div class="card text-white embed-responsive embed-responsive-1by1 product-img-wrapper product-img-wrapper-overlay">
+            <img class="card-img embed-responsive-item product-img" src="https://assets.twic.pics/examples/cat10.jpeg?twic=v1/cover=300x300" data-twic-src="image:examples/cat10.jpeg" width="300" height="300" alt="..." />
+            <div class="card-img-overlay product-img-overlay">
+              <h4 class="card-title product-title m-0">BAGS</h4>
             </div>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-          <div class="card text-white embed-responsive embed-responsive-1by1">
-            <img class="twic card-img embed-responsive-item"
-              src="https://assets.twic.pics/examples/cat11.jpeg?twic=v1/cover=300x300"
-              data-src="image:examples/cat11.jpeg" data-src-transform="cover" loading="lazy" width="300" height="300"
-              alt="..." />
-            <div class="card-img-overlay">
-              <h5 class="card-title">BEAUTY</h5>
+          <div class="card text-white embed-responsive embed-responsive-1by1 product-img-wrapper product-img-wrapper-overlay">
+            <img class="card-img embed-responsive-item product-img" src="https://assets.twic.pics/examples/cat11.jpeg?twic=v1/cover=300x300" data-twic-src="image:examples/cat11.jpeg" width="300" height="300" alt="..." />
+            <div class="card-img-overlay product-img-overlay">
+              <h4 class="card-title product-title m-0">BEAUTY</h4>
             </div>
           </div>
         </div>
@@ -264,417 +252,303 @@
     </section>
 
     <!--  SECTION 2 -->
-    <section id="section2" class="container">
-      <h3>Popular Tops</h3>
+    <section class="container my-5">
+      <h3 class="section-title">Popular Tops</h3>
 
       <div class="row">
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-              <div class="card">
-                <div class="embed-responsive embed-responsive-3by2">
-                  <img class="twic card-img-top embed-responsive-item"
-                       src="https://assets.twic.pics/examples/man2.jpeg?twic=v1/cover=200x300"
-                       data-src="image:examples/man2.jpeg"
-                       data-src-transform="cover"
-                       loading="lazy" width="200" height="300" alt="...">
-
-                  <img class="twic hover-img card-img-top embed-responsive-item"
-                       data-src="image:examples/man2_bis.jpeg" data-src-transform="cover" alt="..." />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">Billabong Sweat-shirt</h5>
-                  <p class="card-text">$70.00</p>
-                  <a href="#" class="btn btn-primary">Buy</a>
-                </div>
-              </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card">
+            <div class="embed-responsive product-img-wrapper embed-responsive-3by2 product-img-wrapper-toggle">
+              <img class="card-img-top embed-responsive-item product-img" src="https://assets.twic.pics/examples/man2.jpeg?twic=v1/cover=200x300" data-twic-src="image:examples/man2.jpeg" width="200" height="300" alt="...">
+              <img class="card-img-top embed-responsive-item product-img product-img-hover" data-twic-src="image:examples/man2_bis.jpeg" alt="..." />
             </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-              <div class="card">
-                <div class="embed-responsive embed-responsive-3by2">
-                  <img class="twic card-img-top embed-responsive-item"
-                       src="https://assets.twic.pics/examples/woman18.jpeg?v=1&twic=v1/cover=200x300"
-                       data-src="image:examples/woman18.jpeg?v=1"
-                       data-src-transform="cover"
-                       loading="lazy" width="200" height="300" alt="...">
-
-                  <img class="twic hover-img card-img-top embed-responsive-item"
-                       data-src="image:examples/woman18_bis.jpeg?v=1" data-src-transform="cover" alt="..." />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">Native Youth Jacket</h5>
-                  <p class="card-text">$85.00</p>
-                  <a href="#" class="btn btn-primary">Buy</a>
-                </div>
-              </div>
+            <div class="card-body product-body">
+              <h5 class="card-title product-title m-0">Billabong Sweat-shirt</h5>
+              <p class="card-text product-text">$70.00</p>
+              <a href="#" class="btn btn-dark btn-small">Buy</a>
             </div>
+          </div>
+        </div>
 
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-              <div class="card">
-                <div class="embed-responsive embed-responsive-3by2">
-                  <img class="twic card-img-top embed-responsive-item"
-                       src="https://assets.twic.pics/examples/man5.jpeg?twic=v1/cover=200x300"
-                       data-src="image:examples/man5.jpeg"
-                       data-src-transform="cover"
-                       loading="lazy" width="200" height="300" alt="...">
-
-                  <img class="twic hover-img card-img-top embed-responsive-item"
-                       data-src="image:examples/man5_bis.jpeg" data-src-transform="cover" alt="..." />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">UO Printed Knit</h5>
-                  <p class="card-text">$65.00</p>
-                  <a href="#" class="btn btn-primary">Buy</a>
-                </div>
-              </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card">
+            <div class="embed-responsive product-img-wrapper embed-responsive-3by2 product-img-wrapper-toggle">
+              <img class="card-img-top embed-responsive-item product-img" src="https://assets.twic.pics/examples/woman18.jpeg?v=1&twic=v1/cover=200x300" data-twic-src="image:examples/woman18.jpeg?v=1" width="200" height="300" alt="...">
+              <img class="card-img-top embed-responsive-item product-img product-img-hover" data-twic-src="image:examples/woman18_bis.jpeg?v=1" alt="..." />
             </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-              <div class="card">
-                <div class="embed-responsive embed-responsive-3by2">
-                  <img class="twic card-img-top embed-responsive-item"
-                       src="https://assets.twic.pics/examples/woman13.jpeg?twic=v1/cover=200x300"
-                       data-src="image:examples/woman13.jpeg"
-                       data-src-transform="cover"
-                       loading="lazy" width="200" height="300" alt="...">
-
-                  <img class="twic hover-img card-img-top embed-responsive-item"
-                       data-src="image:examples/woman13_bis.jpeg" data-src-transform="cover" alt="..." />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">UO Tank Crop</h5>
-                  <p class="card-text">$25.00</p>
-                  <a href="#" class="btn btn-primary">Buy</a>
-                </div>
-              </div>
+            <div class="card-body product-body">
+              <h5 class="card-title product-title m-0">Native Youth Jacket</h5>
+              <p class="card-text product-text">$85.00</p>
+              <a href="#" class="btn btn-dark btn-small">Buy</a>
             </div>
+          </div>
+        </div>
 
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-              <div class="card">
-                <div class="embed-responsive embed-responsive-3by2">
-                  <img class="twic card-img-top embed-responsive-item"
-                       src="https://assets.twic.pics/examples/man6.jpeg?twic=v1/cover=200x300"
-                       data-src="image:examples/man6.jpeg"
-                       data-src-transform="cover"
-                       loading="lazy" width="200" height="300" alt="...">
-
-                  <img class="twic hover-img card-img-top embed-responsive-item"
-                       data-src="image:examples/man6_bis.jpeg" data-src-transform="cover" alt="..." />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">Iets Frans Knit Jumper</h5>
-                  <p class="card-text">$55.00</p>
-                  <a href="#" class="btn btn-primary">Buy</a>
-                </div>
-              </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card">
+            <div class="embed-responsive product-img-wrapper embed-responsive-3by2 product-img-wrapper-toggle">
+              <img class="card-img-top embed-responsive-item product-img product-img-first" src="https://assets.twic.pics/examples/man5.jpeg?twic=v1/cover=200x300" data-twic-src="image:examples/man5.jpeg" width="200" height="300" alt="...">
+              <img class="card-img-top embed-responsive-item product-img product-img-hover" data-twic-src="image:examples/man5_bis.jpeg" alt="..." />
             </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-              <div class="card">
-                <div class="embed-responsive embed-responsive-3by2">
-                  <img class="twic card-img-top embed-responsive-item"
-                       src="https://assets.twic.pics/examples/woman2.jpeg?twic=v1/cover=200x300"
-                       data-src="image:examples/woman2.jpeg"
-                       data-src-transform="cover"
-                       loading="lazy" width="200" height="300" alt="...">
-
-                  <img class="twic hover-img card-img-top embed-responsive-item"
-                       data-src="image:examples/woman2_bis.jpeg" data-src-transform="cover" alt="..." />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">Iets Frans Sweatshirt</h5>
-                  <p class="card-text">$55.00</p>
-                  <a href="#" class="btn btn-primary">Buy</a>
-                </div>
-              </div>
+            <div class="card-body product-body">
+              <h5 class="card-title product-title m-0">UO Printed Knit</h5>
+              <p class="card-text product-text">$65.00</p>
+              <a href="#" class="btn btn-dark btn-small">Buy</a>
             </div>
+          </div>
+        </div>
 
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-              <div class="card">
-                <div class="embed-responsive embed-responsive-3by2">
-                  <img class="twic card-img-top embed-responsive-item"
-                       src="https://assets.twic.pics/examples/woman5.jpeg?twic=v1/cover=200x300"
-                       data-src="image:examples/woman5.jpeg"
-                       data-src-transform="cover"
-                       loading="lazy" width="200" height="300" alt="...">
-
-                  <img class="twic hover-img card-img-top embed-responsive-item"
-                       data-src="image:examples/woman5_bis.jpeg" data-src-transform="cover" alt="..." />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">Live By The Sun T-shirt</h5>
-                  <p class="card-text">$35.00</p>
-                  <a href="#" class="btn btn-primary">Buy</a>
-                </div>
-              </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card">
+            <div class="embed-responsive product-img-wrapper embed-responsive-3by2 product-img-wrapper-toggle">
+              <img class="card-img-top embed-responsive-item product-img product-img-first" src="https://assets.twic.pics/examples/woman13.jpeg?twic=v1/cover=200x300" data-twic-src="image:examples/woman13.jpeg" width="200" height="300" alt="...">
+              <img class="card-img-top embed-responsive-item product-img product-img-hover" data-twic-src="image:examples/woman13_bis.jpeg" alt="..." />
             </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-              <div class="card">
-                <div class="embed-responsive embed-responsive-3by2">
-                   <img class="twic card-img-top embed-responsive-item"
-                        src="https://assets.twic.pics/examples/man3.jpeg?twic=v1/cover=200x300"
-                        data-src="image:examples/man3.jpeg"
-                        data-src-transform="cover"
-                        loading="lazy" width="200" height="300" alt="...">
-
-                  <img class="twic hover-img card-img-top embed-responsive-item"
-                       data-src="image:examples/man3_bis.jpeg" data-src-transform="cover" alt="..." />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">Belief T-shirt</h5>
-                  <p class="card-text">35,00 $</p>
-                  <a href="#" class="btn btn-primary">Buy</a>
-                </div>
-              </div>
+            <div class="card-body product-body">
+              <h5 class="card-title product-title m-0">UO Tank Crop</h5>
+              <p class="card-text product-text">$25.00</p>
+              <a href="#" class="btn btn-dark btn-small">Buy</a>
             </div>
+          </div>
+        </div>
 
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-              <div class="card">
-                <div class="embed-responsive embed-responsive-3by2">
-                  <img class="twic card-img-top embed-responsive-item"
-                       src="https://assets.twic.pics/examples/woman16.jpeg?twic=v1/cover=200x300"
-                       data-src="image:examples/woman16.jpeg"
-                       data-src-transform="cover"
-                       loading="lazy" width="200" height="300" alt="...">
-
-                  <img class="twic hover-img card-img-top embed-responsive-item"
-                       data-src="image:examples/woman16_bis.jpeg" data-src-transform="cover" alt="..." />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">NASA Rocket T-shirt</h5>
-                  <p class="card-text">$39.00</p>
-                  <a href="#" class="btn btn-primary">Buy</a>
-                </div>
-              </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card">
+            <div class="embed-responsive product-img-wrapper embed-responsive-3by2 product-img-wrapper-toggle">
+              <img class="card-img-top embed-responsive-item product-img product-img-first" src="https://assets.twic.pics/examples/man6.jpeg?twic=v1/cover=200x300" data-twic-src="image:examples/man6.jpeg" width="200" height="300" alt="...">
+              <img class="card-img-top embed-responsive-item product-img product-img-hover" data-twic-src="image:examples/man6_bis.jpeg" alt="..." />
             </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-              <div class="card">
-                <div class="embed-responsive embed-responsive-3by2">
-                  <img class="twic card-img-top embed-responsive-item"
-                       src="https://assets.twic.pics/examples/man7.jpeg?twic=v1/cover=200x300"
-                       data-src="image:examples/man7.jpeg"
-                       data-src-transform="cover"
-                       loading="lazy" width="200" height="300" alt="...">
-
-                  <img class="twic hover-img card-img-top embed-responsive-item"
-                       data-src="image:examples/man7_bis.jpeg" data-src-transform="cover" alt="..." />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">UO Striped Knit</h5>
-                  <p class="card-text">$65.00</p>
-                  <a href="#" class="btn btn-primary">Buy</a>
-                </div>
-              </div>
+            <div class="card-body product-body">
+              <h5 class="card-title product-title m-0">Iets Frans Knit Jumper</h5>
+              <p class="card-text product-text">$55.00</p>
+              <a href="#" class="btn btn-dark btn-small">Buy</a>
             </div>
+          </div>
+        </div>
 
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-              <div class="card">
-                <div class="embed-responsive embed-responsive-3by2">
-                  <img class="twic card-img-top embed-responsive-item"
-                       src="https://assets.twic.pics/examples/man4.jpeg?twic=v1/cover=200x300"
-                       data-src="image:examples/man4.jpeg"
-                       data-src-transform="cover"
-                       loading="lazy" width="200" height="300" alt="...">
-
-                  <img class="twic hover-img card-img-top embed-responsive-item"
-                       data-src="image:examples/man4_bis.jpeg" data-src-transform="cover" alt="..." />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">UO Mind's Fried T-shirt</h5>
-                  <p class="card-text">$39.00</p>
-                  <a href="#" class="btn btn-primary">Buy</a>
-                </div>
-              </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card">
+            <div class="embed-responsive product-img-wrapper embed-responsive-3by2 product-img-wrapper-toggle">
+              <img class="card-img-top embed-responsive-item product-img product-img-first" src="https://assets.twic.pics/examples/woman2.jpeg?twic=v1/cover=200x300" data-twic-src="image:examples/woman2.jpeg" width="200" height="300" alt="...">
+              <img class="card-img-top embed-responsive-item product-img product-img-hover" data-twic-src="image:examples/woman2_bis.jpeg" alt="..." />
             </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-              <div class="card">
-                <div class="embed-responsive embed-responsive-3by2">
-                  <img class="twic card-img-top embed-responsive-item"
-                       src="https://assets.twic.pics/examples/woman3.jpeg?twic=v1/cover=200x300"
-                       data-src="image:examples/woman3.jpeg"
-                       data-src-transform="cover"
-                       loading="lazy" width="200" height="300" alt="...">
-
-                  <img class="twic hover-img card-img-top embed-responsive-item"
-                       data-src="image:examples/woman3_bis.jpeg" data-src-transform="cover" alt="..." />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">Iets Frans Sweatshirt</h5>
-                  <p class="card-text">$55.00</p>
-                  <a href="#" class="btn btn-primary">Buy</a>
-                </div>
-              </div>
+            <div class="card-body product-body">
+              <h5 class="card-title product-title m-0">Iets Frans Sweatshirt</h5>
+              <p class="card-text product-text">$55.00</p>
+              <a href="#" class="btn btn-dark btn-small">Buy</a>
             </div>
+          </div>
+        </div>
 
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-              <div class="card">
-                <div class="embed-responsive embed-responsive-3by2">
-                  <img class="twic card-img-top embed-responsive-item"
-                       src="https://assets.twic.pics/examples/man10.jpeg?twic=v1/cover=200x300"
-                       data-src="image:examples/man10.jpeg"
-                       data-src-transform="cover"
-                       loading="lazy" width="200" height="300" alt="...">
-
-                  <img class="twic hover-img card-img-top embed-responsive-item"
-                       data-src="image:examples/man10_bis.jpeg" data-src-transform="cover" alt="..." />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">Champion Sweat-shirt</h5>
-                  <p class="card-text">$65.00</p>
-                  <a href="#" class="btn btn-primary">Buy</a>
-                </div>
-              </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card">
+            <div class="embed-responsive product-img-wrapper embed-responsive-3by2 product-img-wrapper-toggle">
+              <img class="card-img-top embed-responsive-item product-img product-img-first" src="https://assets.twic.pics/examples/woman5.jpeg?twic=v1/cover=200x300" data-twic-src="image:examples/woman5.jpeg" width="200" height="300" alt="...">
+              <img class="card-img-top embed-responsive-item product-img product-img-hover" data-twic-src="image:examples/woman5_bis.jpeg" alt="..." />
             </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-              <div class="card">
-                <div class="embed-responsive embed-responsive-3by2">
-                  <img class="twic card-img-top embed-responsive-item"
-                       src="https://assets.twic.pics/examples/woman17.jpeg?v=1&twic=v1/cover=200x300"
-                       data-src="image:examples/woman17.jpeg?v=1"
-                       data-src-transform="cover"
-                       loading="lazy" width="200" height="300" alt="...">
-
-                  <img class="twic hover-img card-img-top embed-responsive-item"
-                       data-src="image:examples/woman17_bis.jpeg?v=1" data-src-transform="cover" alt="..." />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">Resort Floral Red Shirt</h5>
-                  <p class="card-text">$39.00</p>
-                  <a href="#" class="btn btn-primary">Buy</a>
-                </div>
-              </div>
+            <div class="card-body product-body">
+              <h5 class="card-title product-title m-0">Live By The Sun T-shirt</h5>
+              <p class="card-text product-text">$35.00</p>
+              <a href="#" class="btn btn-dark btn-small">Buy</a>
             </div>
+          </div>
+        </div>
 
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-              <div class="card">
-                <div class="embed-responsive embed-responsive-3by2">
-                  <img class="twic card-img-top embed-responsive-item"
-                       src="https://assets.twic.pics/examples/woman1.jpeg?twic=v1/cover=200x300"
-                       data-src="image:examples/woman1.jpeg"
-                       data-src-transform="cover"
-                       loading="lazy" width="200" height="300" alt="...">
-
-                  <img class="twic hover-img card-img-top embed-responsive-item"
-                       data-src="image:examples/woman1_bis.jpeg" data-src-transform="cover" alt="..." />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">Brendan Shirt</h5>
-                  <p class="card-text">$55.00</p>
-                  <a href="#" class="btn btn-primary">Buy</a>
-                </div>
-              </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card">
+            <div class="embed-responsive product-img-wrapper embed-responsive-3by2 product-img-wrapper-toggle">
+              <img class="card-img-top embed-responsive-item product-img product-img-first" src="https://assets.twic.pics/examples/man3.jpeg?twic=v1/cover=200x300" data-twic-src="image:examples/man3.jpeg" width="200" height="300" alt="...">
+              <img class="card-img-top embed-responsive-item product-img product-img-hover" data-twic-src="image:examples/man3_bis.jpeg" alt="..." />
             </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-              <div class="card">
-                <div class="embed-responsive embed-responsive-3by2">
-                  <img class="twic card-img-top embed-responsive-item"
-                       src="https://assets.twic.pics/examples/man13.jpeg?twic=v1/cover=200x300"
-                       data-src="image:examples/man13.jpeg"
-                       data-src-transform="cover"
-                       loading="lazy" width="200" height="300" alt="...">
-
-                  <img class="twic hover-img card-img-top embed-responsive-item"
-                       data-src="image:examples/man13_bis.jpeg" data-src-transform="cover" alt="..." />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">HUF Striped T-shirt</h5>
-                  <p class="card-text">$35.00</p>
-                  <a href="#" class="btn btn-primary">Buy</a>
-                </div>
-              </div>
+            <div class="card-body product-body">
+              <h5 class="card-title product-title m-0">Belief T-shirt</h5>
+              <p class="card-text product-text">35,00 $</p>
+              <a href="#" class="btn btn-dark btn-small">Buy</a>
             </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card">
+            <div class="embed-responsive product-img-wrapper embed-responsive-3by2 product-img-wrapper-toggle">
+              <img class="card-img-top embed-responsive-item product-img product-img-first" src="https://assets.twic.pics/examples/woman16.jpeg?twic=v1/cover=200x300" data-twic-src="image:examples/woman16.jpeg" width="200" height="300" alt="...">
+              <img class="card-img-top embed-responsive-item product-img product-img-hover" data-twic-src="image:examples/woman16_bis.jpeg" alt="..." />
+            </div>
+            <div class="card-body product-body">
+              <h5 class="card-title product-title m-0">NASA Rocket T-shirt</h5>
+              <p class="card-text product-text">$39.00</p>
+              <a href="#" class="btn btn-dark btn-small">Buy</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card">
+            <div class="embed-responsive product-img-wrapper embed-responsive-3by2 product-img-wrapper-toggle">
+              <img class="card-img-top embed-responsive-item product-img product-img-first" src="https://assets.twic.pics/examples/man7.jpeg?twic=v1/cover=200x300" data-twic-src="image:examples/man7.jpeg" width="200" height="300" alt="...">
+              <img class="card-img-top embed-responsive-item product-img product-img-hover" data-twic-src="image:examples/man7_bis.jpeg" alt="..." />
+            </div>
+            <div class="card-body product-body">
+              <h5 class="card-title product-title m-0">UO Striped Knit</h5>
+              <p class="card-text product-text">$65.00</p>
+              <a href="#" class="btn btn-dark btn-small">Buy</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card">
+            <div class="embed-responsive product-img-wrapper embed-responsive-3by2 product-img-wrapper-toggle">
+              <img class="card-img-top embed-responsive-item product-img product-img-first" src="https://assets.twic.pics/examples/man4.jpeg?twic=v1/cover=200x300" data-twic-src="image:examples/man4.jpeg" width="200" height="300" alt="...">
+              <img class="card-img-top embed-responsive-item product-img product-img-hover" data-twic-src="image:examples/man4_bis.jpeg" alt="..." />
+            </div>
+            <div class="card-body product-body">
+              <h5 class="card-title product-title m-0">UO Mind's Fried T-shirt</h5>
+              <p class="card-text product-text">$39.00</p>
+              <a href="#" class="btn btn-dark btn-small">Buy</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card">
+            <div class="embed-responsive product-img-wrapper embed-responsive-3by2 product-img-wrapper-toggle">
+              <img class="card-img-top embed-responsive-item product-img product-img-first" src="https://assets.twic.pics/examples/woman3.jpeg?twic=v1/cover=200x300" data-twic-src="image:examples/woman3.jpeg" width="200" height="300" alt="...">
+              <img class="card-img-top embed-responsive-item product-img product-img-hover" data-twic-src="image:examples/woman3_bis.jpeg" alt="..." />
+            </div>
+            <div class="card-body product-body">
+              <h5 class="card-title product-title m-0">Iets Frans Sweatshirt</h5>
+              <p class="card-text product-text">$55.00</p>
+              <a href="#" class="btn btn-dark btn-small">Buy</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card">
+            <div class="embed-responsive product-img-wrapper embed-responsive-3by2 product-img-wrapper-toggle">
+              <img class="card-img-top embed-responsive-item product-img product-img-first" src="https://assets.twic.pics/examples/man10.jpeg?twic=v1/cover=200x300" data-twic-src="image:examples/man10.jpeg" width="200" height="300" alt="...">
+              <img class="card-img-top embed-responsive-item product-img product-img-hover" data-twic-src="image:examples/man10_bis.jpeg" alt="..." />
+            </div>
+            <div class="card-body product-body">
+              <h5 class="card-title product-title m-0">Champion Sweat-shirt</h5>
+              <p class="card-text product-text">$65.00</p>
+              <a href="#" class="btn btn-dark btn-small">Buy</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card">
+            <div class="embed-responsive product-img-wrapper embed-responsive-3by2 product-img-wrapper-toggle">
+              <img class="card-img-top embed-responsive-item product-img product-img-first" src="https://assets.twic.pics/examples/woman17.jpeg?v=1&twic=v1/cover=200x300" data-twic-src="image:examples/woman17.jpeg?v=1" width="200" height="300" alt="...">
+              <img class="card-img-top embed-responsive-item product-img product-img-hover" data-twic-src="image:examples/woman17_bis.jpeg?v=1" alt="..." />
+            </div>
+            <div class="card-body product-body">
+              <h5 class="card-title product-title m-0">Resort Floral Red Shirt</h5>
+              <p class="card-text product-text">$39.00</p>
+              <a href="#" class="btn btn-dark btn-small">Buy</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card">
+            <div class="embed-responsive product-img-wrapper embed-responsive-3by2 product-img-wrapper-toggle">
+              <img class="card-img-top embed-responsive-item product-img product-img-first" src="https://assets.twic.pics/examples/woman1.jpeg?twic=v1/cover=200x300" data-twic-src="image:examples/woman1.jpeg" width="200" height="300" alt="...">
+              <img class="card-img-top embed-responsive-item product-img product-img-hover" data-twic-src="image:examples/woman1_bis.jpeg" alt="..." />
+            </div>
+            <div class="card-body product-body">
+              <h5 class="card-title product-title m-0">Brendan Shirt</h5>
+              <p class="card-text product-text">$55.00</p>
+              <a href="#" class="btn btn-dark btn-small">Buy</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card">
+            <div class="embed-responsive product-img-wrapper embed-responsive-3by2 product-img-wrapper-toggle">
+              <img class="card-img-top embed-responsive-item product-img product-img-first" src="https://assets.twic.pics/examples/man13.jpeg?twic=v1/cover=200x300" data-twic-src="image:examples/man13.jpeg" width="200" height="300" alt="...">
+              <img class="card-img-top embed-responsive-item product-img product-img-hover" data-twic-src="image:examples/man13_bis.jpeg" alt="..." />
+            </div>
+            <div class="card-body product-body">
+              <h5 class="card-title product-title m-0">HUF Striped T-shirt</h5>
+              <p class="card-text product-text">$35.00</p>
+              <a href="#" class="btn btn-dark btn-small">Buy</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!--  SECTION 3  -->
-    <section id="section3" class="container">
-      <h3>Kids and Accessories</h3>
+    <section class="container my-5">
+      <h3 class="section-title">Kids and Accessories</h3>
 
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
           <div class="card text-white">
-            <figure class="lazy-lqip embed-responsive embed-responsive-1by1 mb-0">
-              <img class="twic card-img embed-responsive-item"
-                src="https://assets.twic.pics/examples/kids2.jpg?twic=v1/cover=50x50/quality=10"
-                data-src="image:examples/kids2.jpg" data-src-transform="focus=50px0/cover" loading="lazy" width="538"
-                height="538" alt="..." />
+            <figure class="lazy-lqip embed-responsive embed-responsive-1by1 product-img-wrapper mb-0" style="background-image: url(https://assets.twic.pics/examples/kids2.jpg?twic=v1/output=preview)">
+              <img class="card-img embed-responsive-item product-img" data-twic-src="image:examples/kids2.jpg" width="538" height="538" alt="..." />
             </figure>
-            <div class="card-img-overlay">
-              <h5 class="card-title">GIRLS</h5>
+            <div class="card-img-overlay product-img-overlay">
+              <h4 class="card-title product-title m-0">GIRLS</h4>
             </div>
           </div>
         </div>
 
         <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
           <div class="card text-white">
-            <figure class="lazy-lqip embed-responsive embed-responsive-1by1 mb-0">
-              <img class="twic card-img embed-responsive-item"
-                src="https://assets.twic.pics/examples/kids1.jpg?twic=v1/cover=50x50/quality=10"
-                data-src="image:examples/kids1.jpg" data-src-transform="cover" loading="lazy" width="250" height="250"
-                alt="..." />
+            <figure class="lazy-lqip embed-responsive embed-responsive-1by1 product-img-wrapper mb-0" style="background-image: url(https://assets.twic.pics/examples/kids1.jpg?twic=v1/output=preview)">
+              <img class="card-img embed-responsive-item product-img" data-twic-src="image:examples/kids1.jpg" width="250" height="250" alt="..." />
             </figure>
-            <div class="card-img-overlay">
-              <h5 class="card-title">BOYS</h5>
+            <div class="card-img-overlay product-img-overlay">
+              <h4 class="card-title product-title m-0">BOYS</h4>
             </div>
           </div>
         </div>
 
         <div class="col-lg-3 col-md-3 col-sm-6 mb-4">
           <div class="card text-white">
-            <figure class="lazy-lqip embed-responsive embed-responsive-1by1 mb-0">
-              <img class="twic card-img embed-responsive-item"
-                src="https://assets.twic.pics/examples/jewels.webp?twic=v1/cover=50x50/quality=10"
-                data-src="image:examples/jewels.webp" data-src-transform="cover" loading="lazy" width="250" height="250"
-                alt="..." />
+            <figure class="lazy-lqip embed-responsive embed-responsive-1by1 product-img-wrapper mb-0" style="background-image: url(https://assets.twic.pics/examples/jewels.webp?twic=v1/output=preview)">
+              <img class="card-img embed-responsive-item product-img" data-twic-src="image:examples/jewels.webp" width="250" height="250" alt="..." />
             </figure>
-            <div class="card-img-overlay">
-              <h5 class="card-title">JEWELRY</h5>
+            <div class="card-img-overlay product-img-overlay">
+              <h4 class="card-title product-title m-0">JEWELRY</h4>
             </div>
           </div>
         </div>
 
         <div class="col-lg-3 col-md-3 col-sm-6 mb-4">
           <div class="card text-white">
-            <figure class="lazy-lqip embed-responsive embed-responsive-1by1 mb-0">
-              <img class="twic card-img embed-responsive-item"
-                src="https://assets.twic.pics/examples/hat1.jpeg?twic=v1/cover=50x50/quality=10"
-                data-src="image:examples/hat1.jpeg" data-src-transform="cover" loading="lazy" width="250" height="250"
-                alt="..." />
+            <figure class="lazy-lqip embed-responsive embed-responsive-1by1 product-img-wrapper mb-0" style="background-image: url(https://assets.twic.pics/examples/hat1.jpeg?twic=v1/output=preview)">
+              <img class="card-img embed-responsive-item product-img" data-twic-src="image:examples/hat1.jpeg" width="250" height="250" alt="..." />
             </figure>
-            <div class="card-img-overlay">
-              <h5 class="card-title">HATS</h5>
+            <div class="card-img-overlay product-img-overlay">
+              <h4 class="card-title product-title m-0">HATS</h4>
             </div>
           </div>
         </div>
 
         <div class="col-lg-3 col-md-3 col-sm-6 mb-4">
           <div class="card text-white">
-            <figure class="lazy-lqip embed-responsive embed-responsive-1by1 mb-0">
-              <img class="twic card-img embed-responsive-item"
-                src="https://assets.twic.pics/examples/socks.jpeg?twic=v1/cover=50x50/quality=10"
-                data-src="image:examples/socks.jpeg" data-src-transform="focus=0x55p/cover" loading="lazy" width="250"
-                height="250" alt="..." />
+            <figure class="lazy-lqip embed-responsive embed-responsive-1by1 product-img-wrapper mb-0" style="background-image: url(https://assets.twic.pics/examples/socks.jpeg?twic=v1/output=preview)">
+              <img class="card-img embed-responsive-item product-img" data-twic-src="image:examples/socks.jpeg" width="250" height="250" alt="..." />
             </figure>
-            <div class="card-img-overlay">
-              <h5 class="card-title">SOCKS</h5>
+            <div class="card-img-overlay product-img-overlay">
+              <h4 class="card-title product-title m-0">SOCKS</h4>
             </div>
           </div>
         </div>
 
         <div class="col-lg-3 col-md-3 col-sm-6 mb-4">
           <div class="card text-white">
-            <figure class="lazy-lqip embed-responsive embed-responsive-1by1 mb-0">
-              <img class="twic card-img embed-responsive-item"
-                src="https://assets.twic.pics/examples/glasses1.jpeg?twic=v1/cover=50x50/quality=10"
-                data-src="image:examples/glasses1.jpeg" data-src-transform="cover" loading="lazy" width="250"
-                height="250" alt="..." />
+            <figure class="lazy-lqip embed-responsive embed-responsive-1by1 product-img-wrapper mb-0" style="background-image: url(https://assets.twic.pics/examples/glasses1.jpeg?twic=v1/output=preview)">
+              <img class="card-img embed-responsive-item product-img" data-twic-src="image:examples/glasses1.jpeg" width="250" height="250" alt="..." />
             </figure>
-            <div class="card-img-overlay">
-              <h5 class="card-title">SUNGLASSES</h5>
+            <div class="card-img-overlay product-img-overlay">
+              <h4 class="card-title product-title m-0">SUNGLASSES</h4>
             </div>
           </div>
         </div>
@@ -682,260 +556,272 @@
     </section>
 
     <!--  SECTION 4  -->
-    <section class="clients-pics container">
-      <h3>Community Pictures</h3>
+    <section class="container my-5">
+      <h3 class="section-title">Community Pictures</h3>
 
       <div class="row">
-        <div class="figure-container col-lg-4 col-md-4 col-sm-4 col-12">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="saturate embed-responsive-item"
-              src="https://assets.twic.pics/examples/client19.jpg?twic=v1/cover=1x1" alt="placeholder" />
-            <img class="twic faded embed-responsive-item" data-src="image:examples/client19.jpg"
-              data-src-transform="cover" alt="..." />
+        <div class="col-lg-4 col-md-4 col-sm-4 col-12 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="saturate embed-responsive-item product-img" src="https://assets.twic.pics/examples/client19.jpg?twic=v1/output=meancolor" alt="placeholder" />
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client19.jpg" alt="..." />
           </figure>
         </div>
 
-        <div class="figure-container col-lg-4 col-md-4 col-sm-4 col-12">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="saturate embed-responsive-item"
-              src="https://assets.twic.pics/examples/client10.jpg?twic=v1/cover=1x1" alt="placeholder" />
-            <img class="twic faded embed-responsive-item" data-src="image:examples/client10.jpg"
-              data-src-transform="focus=0x100p/cover" alt="..." />
+        <div class="col-lg-4 col-md-4 col-sm-4 col-12 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="saturate embed-responsive-item product-img" src="https://assets.twic.pics/examples/client10.jpg?twic=v1/output=meancolor" alt="placeholder" />
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client10.jpg" alt="..." />
           </figure>
         </div>
 
-        <div class="figure-container col-lg-4 col-md-4 col-sm-4 col-12">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="saturate embed-responsive-item"
-              src="https://assets.twic.pics/examples/client9.jpg?twic=v1/cover=1x1" alt="placeholder" />
-            <img class="twic faded embed-responsive-item" data-src="image:examples/client9.jpg"
-              data-src-transform="focus=50px40p/cover" alt="..." />
+        <div class="col-lg-4 col-md-4 col-sm-4 col-12 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="saturate embed-responsive-item product-img" src="https://assets.twic.pics/examples/client9.jpg?twic=v1/output=meancolor" alt="placeholder" />
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client9.jpg" alt="..." />
           </figure>
         </div>
 
-        <div class="figure-container col-lg-4 col-md-4 col-sm-4 col-12">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="saturate embed-responsive-item"
-              src="https://assets.twic.pics/examples/client4.jpg?twic=v1/cover=1x1" alt="placeholder" />
-            <img class="twic faded embed-responsive-item" data-src="image:examples/client4.jpg"
-              data-src-transform="focus=50px0/cover" alt="..." />
+        <div class="col-lg-4 col-md-4 col-sm-4 col-12 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="saturate embed-responsive-item product-img" src="https://assets.twic.pics/examples/client4.jpg?twic=v1/output=meancolor" alt="placeholder" />
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client4.jpg" alt="..." />
           </figure>
         </div>
 
-        <div class="figure-container col-lg-4 col-md-4 col-sm-4 col-12">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="saturate embed-responsive-item"
-              src="https://assets.twic.pics/examples/client12.jpg?twic=v1/cover=1x1" alt="placeholder" />
-            <img class="twic faded embed-responsive-item" data-src="image:examples/client12.jpg"
-              data-src-transform="cover" alt="..." />
+        <div class="col-lg-4 col-md-4 col-sm-4 col-12 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="saturate embed-responsive-item product-img" src="https://assets.twic.pics/examples/client12.jpg?twic=v1/output=meancolor" alt="placeholder" />
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client12.jpg" alt="..." />
           </figure>
         </div>
 
-        <div class="figure-container col-lg-4 col-md-4 col-sm-4 col-12">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="saturate embed-responsive-item"
-              src="https://assets.twic.pics/examples/client5.jpg?twic=v1/cover=1x1" alt="placeholder" />
-            <img class="twic faded embed-responsive-item" data-src="image:examples/client5.jpg"
-              data-src-transform="focus=50px0/cover" alt="..." />
+        <div class="col-lg-4 col-md-4 col-sm-4 col-12 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="saturate embed-responsive-item product-img" src="https://assets.twic.pics/examples/client5.jpg?twic=v1/output=meancolor" alt="placeholder" />
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client5.jpg" alt="..." />
           </figure>
         </div>
 
-        <div class="figure-container col-lg-4 col-md-4 col-sm-4 col-12">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="saturate embed-responsive-item"
-              src="https://assets.twic.pics/examples/client15.jpg?twic=v1/cover=1x1" alt="placeholder" />
-            <img class="twic faded embed-responsive-item" data-src="image:examples/client15.jpg"
-              data-src-transform="cover" alt="..." />
+        <div class="col-lg-4 col-md-4 col-sm-4 col-12 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="saturate embed-responsive-item product-img" src="https://assets.twic.pics/examples/client15.jpg?twic=v1/output=meancolor" alt="placeholder" />
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client15.jpg" alt="..." />
           </figure>
         </div>
 
-        <div class="figure-container col-lg-4 col-md-4 col-sm-4 col-12">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="saturate embed-responsive-item"
-              src="https://assets.twic.pics/examples/client7.jpg?twic=v1/cover=1x1" alt="placeholder" />
-            <img class="twic faded embed-responsive-item" data-src="image:examples/client7.jpg"
-              data-src-transform="cover" alt="..." />
+        <div class="col-lg-4 col-md-4 col-sm-4 col-12 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="saturate embed-responsive-item product-img" src="https://assets.twic.pics/examples/client7.jpg?twic=v1/output=meancolor" alt="placeholder" />
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client7.jpg" alt="..." />
           </figure>
         </div>
 
-        <div class="figure-container col-lg-4 col-md-4 col-sm-4 col-12">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="saturate embed-responsive-item"
-              src="https://assets.twic.pics/examples/client23.jpg?twic=v1/cover=1x1" alt="placeholder" />
-            <img class="twic faded embed-responsive-item" data-src="image:examples/client23.jpg"
-              data-src-transform="focus=50px45p/cover" alt="..." />
+        <div class="col-lg-4 col-md-4 col-sm-4 col-12 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="saturate embed-responsive-item product-img" src="https://assets.twic.pics/examples/client23.jpg?twic=v1/output=meancolor" alt="placeholder" />
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client23.jpg" alt="..." />
           </figure>
         </div>
       </div>
     </section>
 
-    <section class="clients-pics container">
+    <section class="container">
+      <div id="footerCarousel" class="carousel slide carousel-responsive" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#footerCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#footerCarousel" data-slide-to="1"></li>
+          <li data-target="#footerCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <figure class="lazy-lqip embed-responsive product-img-wrapper mb-0" style="background-image: url(https://assets.twic.pics/examples/banner1.jpg?twic=v1/focus=auto/output=preview)">
+              <img class="card-img embed-responsive-item product-img" data-twic-src="image:examples/banner1.jpg" data-twic-src-focus="auto" data-twic-src-step="50" alt="..." />
+            </figure>
+            <div class="carousel-overlay"></div>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <figure class="lazy-lqip embed-responsive product-img-wrapper mb-0" style="background-image: url(https://assets.twic.pics/examples/banner5.jpg?twic=v1/focus=auto/output=preview)">
+              <img class="card-img embed-responsive-item product-img" data-twic-src="image:examples/banner5.jpg" data-twic-src-focus="auto" data-twic-src-step="50" alt="..." />
+            </figure>
+            <div class="carousel-overlay"></div>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <figure class="lazy-lqip embed-responsive product-img-wrapper mb-0" style="background-image: url(https://assets.twic.pics/examples/banner2.jpg?twic=v1/focus=auto/output=preview)">
+              <img class="card-img embed-responsive-item product-img" data-twic-src="image:examples/banner2.jpg" data-twic-src-focus="auto" data-twic-src-step="50" alt="..." />
+            </figure>
+            <div class="carousel-overlay"></div>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            </div>
+          </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#footerCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#footerCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="container my-5">
       <div class="row">
-        <div class="figure-container col-lg-2 col-md-2 col-sm-3 col-6">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="twic faded embed-responsive-item" src="https://assets.twic.pics/v1/placeholder:180x180:fff/fff"
-              data-src="image:examples/client19.jpg" data-src-transform="cover" alt="..." />
+        <div class="col-lg-2 col-md-2 col-sm-3 col-6 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client19.jpg" alt="..." />
           </figure>
         </div>
 
-        <div class="figure-container col-lg-2 col-md-2 col-sm-3 col-6">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="twic faded embed-responsive-item" src="https://assets.twic.pics/v1/placeholder:180x180:fff/fff"
-              data-src="image:examples/client10.jpg" data-src-transform="focus=0x100p/cover" alt="..." />
+        <div class="col-lg-2 col-md-2 col-sm-3 col-6 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client10.jpg" alt="..." />
           </figure>
         </div>
 
-        <div class="figure-container col-lg-2 col-md-2 col-sm-3 col-6">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="twic faded embed-responsive-item" src="https://assets.twic.pics/v1/placeholder:180x180:fff/fff"
-              data-src="image:examples/client3.jpg" data-src-transform="focus=50px0/cover" alt="..." />
+        <div class="col-lg-2 col-md-2 col-sm-3 col-6 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client3.jpg" alt="..." />
           </figure>
         </div>
 
-        <div class="figure-container col-lg-2 col-md-2 col-sm-3 col-6">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="twic faded embed-responsive-item" src="https://assets.twic.pics/v1/placeholder:180x180:fff/fff"
-              data-src="image:examples/client4.jpg" data-src-transform="focus=50px0/cover" alt="..." />
+        <div class="col-lg-2 col-md-2 col-sm-3 col-6 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client4.jpg" alt="..." />
           </figure>
         </div>
 
-        <div class="figure-container col-lg-2 col-md-2 col-sm-3 col-6">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="twic faded embed-responsive-item" src="https://assets.twic.pics/v1/placeholder:180x180:fff/fff"
-              data-src="image:examples/client24.jpg" data-src-transform="focus=0x100p/cover" alt="..." />
+        <div class="col-lg-2 col-md-2 col-sm-3 col-6 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client24.jpg" alt="..." />
           </figure>
         </div>
 
-        <div class="figure-container col-lg-2 col-md-2 col-sm-3 col-6">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="twic faded embed-responsive-item" src="https://assets.twic.pics/v1/placeholder:180x180:fff/fff"
-              data-src="image:examples/client5.jpg" data-src-transform="focus=50px0/cover" alt="..." />
+        <div class="col-lg-2 col-md-2 col-sm-3 col-6 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client5.jpg" alt="..." />
           </figure>
         </div>
 
-        <div class="figure-container col-lg-2 col-md-2 col-sm-3 col-6">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="twic faded embed-responsive-item" src="https://assets.twic.pics/v1/placeholder:180x180:fff/fff"
-              data-src="image:examples/client6.jpg" data-src-transform="cover" alt="..." />
+        <div class="col-lg-2 col-md-2 col-sm-3 col-6 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client6.jpg" alt="..." />
           </figure>
         </div>
 
-        <div class="figure-container col-lg-2 col-md-2 col-sm-3 col-6">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="twic faded embed-responsive-item" src="https://assets.twic.pics/v1/placeholder:180x180:fff/fff"
-              data-src="image:examples/client7.jpg" data-src-transform="focus=50px0/cover" alt="..." />
+        <div class="col-lg-2 col-md-2 col-sm-3 col-6 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client7.jpg" alt="..." />
           </figure>
         </div>
 
-        <div class="figure-container col-lg-2 col-md-2 col-sm-3 col-6">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="twic faded embed-responsive-item" src="https://assets.twic.pics/v1/placeholder:180x180:fff/fff"
-              data-src="image:examples/client8.jpg" data-src-transform="focus=0x100p/cover" alt="..." />
+        <div class="col-lg-2 col-md-2 col-sm-3 col-6 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client8.jpg" alt="..." />
           </figure>
         </div>
 
-        <div class="figure-container col-lg-2 col-md-2 col-sm-3 col-6">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="twic faded embed-responsive-item" src="https://assets.twic.pics/v1/placeholder:180x180:fff/fff"
-              data-src="image:examples/client9.jpg" data-src-transform="focus=50px0/cover" alt="..." />
+        <div class="col-lg-2 col-md-2 col-sm-3 col-6 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client9.jpg" alt="..." />
           </figure>
         </div>
 
-        <div class="figure-container col-lg-2 col-md-2 col-sm-3 col-6">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="twic faded embed-responsive-item" src="https://assets.twic.pics/v1/placeholder:180x180:fff/fff"
-              data-src="image:examples/client21.jpg" data-src-transform="focus=50px0/cover" alt="..." />
+        <div class="col-lg-2 col-md-2 col-sm-3 col-6 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client21.jpg" alt="..." />
           </figure>
         </div>
 
-        <div class="figure-container col-lg-2 col-md-2 col-sm-3 col-6">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="twic faded embed-responsive-item" src="https://assets.twic.pics/v1/placeholder:180x180:fff/fff"
-              data-src="image:examples/client11.jpg" data-src-transform="focus=0x100p/cover" alt="..." />
+        <div class="col-lg-2 col-md-2 col-sm-3 col-6 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client11.jpg" alt="..." />
           </figure>
         </div>
 
-        <div class="figure-container col-lg-2 col-md-2 col-sm-3 col-6">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="twic faded embed-responsive-item" src="https://assets.twic.pics/v1/placeholder:180x180:fff/fff"
-              data-src="image:examples/client12.jpg" data-src-transform="cover" alt="..." />
+        <div class="col-lg-2 col-md-2 col-sm-3 col-6 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client12.jpg" alt="..." />
           </figure>
         </div>
 
-        <div class="figure-container col-lg-2 col-md-2 col-sm-3 col-6">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="twic faded embed-responsive-item" src="https://assets.twic.pics/v1/placeholder:180x180:fff/fff"
-              data-src="image:examples/client13.jpg" data-src-transform="cover" alt="..." />
+        <div class="col-lg-2 col-md-2 col-sm-3 col-6 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client13.jpg" alt="..." />
           </figure>
         </div>
 
-        <div class="figure-container col-lg-2 col-md-2 col-sm-3 col-6">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="twic faded embed-responsive-item" src="https://assets.twic.pics/v1/placeholder:180x180:fff/fff"
-              data-src="image:examples/client20.jpg" data-src-transform="focus=50px0/cover" alt="..." />
+        <div class="col-lg-2 col-md-2 col-sm-3 col-6 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client20.jpg" alt="..." />
           </figure>
         </div>
 
-        <div class="figure-container col-lg-2 col-md-2 col-sm-3 col-6">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="twic faded embed-responsive-item" src="https://assets.twic.pics/v1/placeholder:180x180:fff/fff"
-              data-src="image:examples/client15.jpg" data-src-transform="cover" alt="..." />
+        <div class="col-lg-2 col-md-2 col-sm-3 col-6 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client15.jpg" alt="..." />
           </figure>
         </div>
 
-        <div class="figure-container col-lg-2 col-md-2 col-sm-3 col-6">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="twic faded embed-responsive-item" src="https://assets.twic.pics/v1/placeholder:180x180:fff/fff"
-              data-src="image:examples/client16.jpg" data-src-transform="cover" alt="..." />
+        <div class="col-lg-2 col-md-2 col-sm-3 col-6 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client16.jpg" alt="..." />
           </figure>
         </div>
 
-        <div class="figure-container col-lg-2 col-md-2 col-sm-3 col-6">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="twic faded embed-responsive-item" src="https://assets.twic.pics/v1/placeholder:180x180:fff/fff"
-              data-src="image:examples/client14.jpg" data-src-transform="focus=30px0/cover" alt="..." />
+        <div class="col-lg-2 col-md-2 col-sm-3 col-6 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client14.jpg" alt="..." />
           </figure>
         </div>
 
-        <div class="figure-container col-lg-2 col-md-2 col-sm-3 col-6">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="twic faded embed-responsive-item" src="https://assets.twic.pics/v1/placeholder:180x180:fff/fff"
-              data-src="image:examples/client18.jpg" data-src-transform="focus=50px0/cover" alt="..." />
+        <div class="col-lg-2 col-md-2 col-sm-3 col-6 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client18.jpg" alt="..." />
           </figure>
         </div>
 
-        <div class="figure-container col-lg-2 col-md-2 col-sm-3 col-6">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="twic faded embed-responsive-item" src="https://assets.twic.pics/v1/placeholder:180x180:fff/fff"
-              data-src="image:examples/client1.jpg" data-src-transform="focus=0x100p/cover" alt="..." />
+        <div class="col-lg-2 col-md-2 col-sm-3 col-6 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client1.jpg" alt="..." />
           </figure>
         </div>
 
-        <div class="figure-container col-lg-2 col-md-2 col-sm-3 col-6">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="twic faded embed-responsive-item" src="https://assets.twic.pics/v1/placeholder:180x180:fff/fff"
-              data-src="image:examples/client17.jpg" data-src-transform="focus=50px0/cover" alt="..." />
+        <div class="col-lg-2 col-md-2 col-sm-3 col-6 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client17.jpg" alt="..." />
           </figure>
         </div>
 
-        <div class="figure-container col-lg-2 col-md-2 col-sm-3 col-6">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="twic faded embed-responsive-item" src="https://assets.twic.pics/v1/placeholder:180x180:fff/fff"
-              data-src="image:examples/client2.jpg" data-src-transform="focus=50px0/cover" alt="..." />
+        <div class="col-lg-2 col-md-2 col-sm-3 col-6 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client2.jpg" alt="..." />
           </figure>
         </div>
 
-        <div class="figure-container col-lg-2 col-md-2 col-sm-3 col-6">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="twic faded embed-responsive-item" src="https://assets.twic.pics/v1/placeholder:180x180:fff/fff"
-              data-src="image:examples/client22.jpg" data-src-transform="focus=50px0/cover" alt="..." />
+        <div class="col-lg-2 col-md-2 col-sm-3 col-6 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client22.jpg" alt="..." />
           </figure>
         </div>
 
-        <div class="figure-container col-lg-2 col-md-2 col-sm-3 col-6">
-          <figure class="lazy-fade embed-responsive embed-responsive-1by1 mb-0">
-            <img class="twic faded embed-responsive-item" src="https://assets.twic.pics/v1/placeholder:180x180:fff/fff"
-              data-src="image:examples/client23.jpg" data-src-transform="cover" alt="..." />
+        <div class="col-lg-2 col-md-2 col-sm-3 col-6 p-0">
+          <figure class="lazy-fade embed-responsive embed-responsive-1by1 product-img-wrapper mb-0">
+            <img class="faded embed-responsive-item product-img" data-twic-src="image:examples/client23.jpg" alt="..." />
           </figure>
         </div>
       </div>
@@ -943,17 +829,19 @@
   </main>
 
   <footer class="container">
-    <hr />
-    <div>
-      <p>
-        This website is unoffical and developed for TwicPics demonstration purposes
-      </p>
+    <div class="row">
+      <div class="col-12">
+        <hr />
+        <p class="text-center font-italic small">
+          This website is unoffical and developed for TwicPics demonstration purposes
+        </p>
+      </div>
     </div>
   </footer>
-  <!-- partial -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js?"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="https://assets.twic.pics/v1/script"></script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
