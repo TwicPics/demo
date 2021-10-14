@@ -1,0 +1,380 @@
+<!-- This example requires Tailwind CSS v2.0+ -->
+<template>
+  <div class="bg-white">
+    <div class="flex justify-center text-white bg-twicpics">
+      <h1 class="flex items-center">
+        <img
+          class="h-8 object-contain"
+          src="../assets/twicpics-logo.svg"
+          alt="TwicPics logo"
+        />
+        <span class="ml-3 mr-1">x</span>
+        <img
+          class="h-12 object-contain"
+          src="../assets/vue-logo.png"
+          alt="Vue.JS logo"
+        />
+      </h1>
+    </div>
+    <div
+      class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8"
+    >
+      <div class="md:flex md:items-center md:justify-between">
+        <h2 class="text-2xl font-extrabold tracking-tight text-gray-900">
+          Trending products
+        </h2>
+        <a
+          href="#"
+          class="hidden text-sm font-medium text-indigo-600 hover:text-indigo-500 md:block"
+          >Shop the collection<span aria-hidden="true"> &rarr;</span></a
+        >
+      </div>
+
+      <div
+        class="mt-6 grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-4 md:gap-y-0 lg:gap-x-8"
+      >
+        <div
+          v-for="product in trendingProducts"
+          :key="product.id"
+          class="group relative"
+        >
+          <div
+            class="w-full bg-gray-200 rounded-md overflow-hidden group-hover:opacity-75"
+          >
+            <TwicImg
+              :src="product.imageSrc"
+              ratio="4/5"
+              :alt="product.imageAlt"
+            />
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">
+            <a :href="product.href">
+              <span class="absolute inset-0" />
+              {{ product.name }}
+            </a>
+          </h3>
+          <p class="mt-1 text-sm text-gray-500">{{ product.color }}</p>
+          <p class="mt-1 text-sm font-medium text-gray-900">
+            {{ product.price }}
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-8 text-sm md:hidden">
+        <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500"
+          >Shop the collection<span aria-hidden="true"> &rarr;</span></a
+        >
+      </div>
+    </div>
+
+    <div
+      class="max-w-2xl mx-auto py-16 px-4 sm:pt-6 sm:pb-24 sm:px-6 lg:max-w-7xl lg:px-8"
+    >
+      <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">
+        Products
+      </h2>
+
+      <div
+        class="mt-6 grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8"
+      >
+        <a
+          v-for="product in products"
+          :key="product.id"
+          :href="product.href"
+          class="group"
+        >
+          <div class="w-full bg-gray-200 rounded-lg overflow-hidden">
+            <TwicImg :src="product.imageSrc" :alt="product.imageAlt" />
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">
+            {{ product.name }}
+          </h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">
+            {{ product.price }}
+          </p>
+        </a>
+      </div>
+    </div>
+
+    <div
+      class="max-w-2xl mx-auto py-16 px-4 sm:pt-6 sm:pb-24 sm:px-6 lg:max-w-7xl lg:px-8"
+    >
+      <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">
+        Our favorites
+      </h2>
+
+      <div
+        className="mt-6 grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:gap-x-8"
+      >
+        <a
+          v-for="product in favProducts"
+          :key="product.id"
+          :href="product.href"
+          class="group"
+        >
+          <div class="w-full rounded-lg overflow-hidden">
+            <TwicImg
+              :src="product.imageSrc"
+              ratio="2/3"
+              :alt="product.imageAlt"
+            />
+          </div>
+          <div
+            class="mt-4 flex items-center justify-between text-base font-medium text-gray-900"
+          >
+            <h3>
+              {{ product.name }}
+            </h3>
+            <p>
+              {{ product.price }}
+            </p>
+          </div>
+          <p class="mt-1 text-sm italic text-gray-500">
+            {{ product.description }}
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+const trendingProducts = [
+  {
+    id: 1,
+    name: "Leather Long Wallet",
+    color: "Natural",
+    price: "$75",
+    href: "#",
+    imageSrc:
+      "https://assets.twicpics.com/demo/fake-websites/products-listing/home-page-04-trending-product-02.jpeg",
+    imageAlt: "Hand stitched, orange leather long wallet."
+  },
+  {
+    id: 2,
+    name: "Machined Pencil & Pen Set",
+    color: "Black",
+    price: "$70",
+    href: "#",
+    imageSrc:
+      "https://assets.twicpics.com/demo/fake-websites/products-listing/home-page-04-trending-product-03.jpeg",
+    imageAlt: ""
+  },
+  {
+    id: 3,
+    name: "Mini-Sketchbooks",
+    color: "Light Brown",
+    price: "$27",
+    href: "#",
+    imageSrc:
+      "https://assets.twicpics.com/demo/fake-websites/products-listing/home-page-04-trending-product-04.jpeg",
+    imageAlt: ""
+  },
+  {
+    id: 4,
+    name: "Organizer Set",
+    color: "Walnut",
+    price: "$149",
+    href: "#",
+    imageSrc:
+      "https://assets.twicpics.com/demo/fake-websites/products-listing/home-page-04-trending-product-01.jpeg",
+    imageAlt: ""
+  }
+];
+
+const products = [
+  {
+    id: 1,
+    name: "Earthen Bottle",
+    href: "#",
+    price: "$48",
+    imageSrc:
+      "https://assets.twicpics.com/demo/fake-websites/products-listing/category-page-04-image-card-01.jpeg",
+    imageAlt:
+      "Tall slender porcelain bottle with natural clay textured body and cork stopper."
+  },
+  {
+    id: 2,
+    name: "Nomad Tumbler",
+    href: "#",
+    price: "$35",
+    imageSrc:
+      "https://assets.twicpics.com/demo/fake-websites/products-listing/category-page-04-image-card-02.jpeg",
+    imageAlt:
+      "Olive drab green insulated bottle with flared screw lid and flat top."
+  },
+  {
+    id: 3,
+    name: "Focus Paper Refill",
+    href: "#",
+    price: "$89",
+    imageSrc:
+      "https://assets.twicpics.com/demo/fake-websites/products-listing/category-page-04-image-card-03.jpeg",
+    imageAlt:
+      "Person using a pen to cross a task off a productivity paper card."
+  },
+  {
+    id: 4,
+    name: "Machined Mechanical Pencil",
+    href: "#",
+    price: "$35",
+    imageSrc:
+      "https://assets.twicpics.com/demo/fake-websites/products-listing/category-page-04-image-card-04.jpeg",
+    imageAlt:
+      "Hand holding black machined steel mechanical pencil with brass tip and top."
+  },
+  {
+    id: 5,
+    name: "Focus Card Tray",
+    href: "#",
+    price: "$64",
+    imageSrc:
+      "https://assets.twicpics.com/demo/fake-websites/products-listing/category-page-04-image-card-05.jpeg",
+    imageAlt: ""
+  },
+  {
+    id: 6,
+    name: "Focus Multi-Pack",
+    href: "#",
+    price: "$39",
+    imageSrc:
+      "https://assets.twicpics.com/demo/fake-websites/products-listing/category-page-04-image-card-06.jpeg",
+    imageAlt: ""
+  },
+  {
+    id: 7,
+    name: "Brass Scissors",
+    href: "#",
+    price: "$50",
+    imageSrc:
+      "https://assets.twicpics.com/demo/fake-websites/products-listing/category-page-04-image-card-07.jpeg",
+    imageAlt: ""
+  },
+  {
+    id: 8,
+    name: "Focus Carry Pouch",
+    href: "#",
+    price: "$32",
+    imageSrc:
+      "https://assets.twicpics.com/demo/fake-websites/products-listing/category-page-04-image-card-08.jpeg",
+    imageAlt: ""
+  },
+  {
+    id: 9,
+    name: "Machined Pen",
+    href: "#",
+    price: "$35",
+    imageSrc:
+      "https://assets.twicpics.com/demo/fake-websites/products-listing/home-page-02-product-01.jpeg",
+    imageAlt: ""
+  },
+  {
+    id: 10,
+    name: "Earthen Mug",
+    href: "#",
+    price: "$28",
+    imageSrc:
+      "https://assets.twicpics.com/demo/fake-websites/products-listing/home-page-02-product-02.jpeg",
+    imageAlt: ""
+  },
+  {
+    id: 11,
+    name: "Leatherbound Daily Journal Set",
+    href: "#",
+    price: "$50",
+    imageSrc:
+      "https://assets.twicpics.com/demo/fake-websites/products-listing/home-page-02-product-03.jpeg",
+    imageAlt: ""
+  },
+  {
+    id: 12,
+    name: "Leatherbound Daily Journal",
+    href: "#",
+    price: "$40",
+    imageSrc:
+      "https://assets.twicpics.com/demo/fake-websites/products-listing/home-page-02-product-04.jpeg",
+    imageAlt: ""
+  },
+  {
+    id: 13,
+    name: "Organic Basic Set",
+    href: "#",
+    price: "$149",
+    imageSrc:
+      "https://assets.twicpics.com/demo/fake-websites/products-listing/category-page-05-image-card-01.jpeg",
+    imageAlt: ""
+  },
+  {
+    id: 14,
+    name: "Out and About Bottle",
+    href: "#",
+    price: "$25",
+    imageSrc:
+      "https://assets.twicpics.com/demo/fake-websites/products-listing/category-page-05-image-card-07.jpeg",
+    imageAlt: ""
+  },
+  {
+    id: 15,
+    name: "Daily Notebook Refill Pack",
+    href: "#",
+    price: "$14",
+    imageSrc:
+      "https://assets.twicpics.com/demo/fake-websites/products-listing/category-page-05-image-card-08.jpeg",
+    imageAlt: ""
+  },
+  {
+    id: 16,
+    name: "Organize Basic Set",
+    href: "#",
+    price: "$149",
+    imageSrc:
+      "https://assets.twicpics.com/demo/fake-websites/products-listing/category-page-05-image-card-06.jpeg",
+    imageAlt: ""
+  }
+];
+
+const favProducts = [
+  {
+    id: 1,
+    name: "Focus Paper Refill",
+    href: "#",
+    price: "$13",
+    description: "3 sizes available",
+    imageSrc:
+      "https://assets.twicpics.com/demo/fake-websites/products-listing/category-page-01-image-card-01.jpeg",
+    imageAlt:
+      "Person using a pen to cross a task off a productivity paper card."
+  },
+  {
+    id: 2,
+    name: "Focus Card Holder",
+    href: "#",
+    price: "$64",
+    description: "Walnut",
+    imageSrc:
+      "https://assets.twicpics.com/demo/fake-websites/products-listing/category-page-01-image-card-02.jpeg",
+    imageAlt: "Paper card sitting upright in walnut card holder on desk."
+  },
+  {
+    id: 3,
+    name: "Focus Carry Case",
+    href: "#",
+    price: "$32",
+    description: "Heather Gray",
+    imageSrc:
+      "https://assets.twicpics.com/demo/fake-websites/products-listing/category-page-01-image-card-03.jpeg",
+    imageAlt:
+      "Textured gray felt pouch for paper cards with snap button flap and elastic pen holder loop."
+  }
+];
+
+export default {
+  setup() {
+    return {
+      trendingProducts,
+      products,
+      favProducts
+    };
+  }
+};
+</script>
