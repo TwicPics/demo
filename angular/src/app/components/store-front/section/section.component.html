@@ -1,0 +1,54 @@
+<ng-container *ngIf="section">
+
+    <section [attr.aria-labelledby]="section.type + '-heading'" [ngClass]="{'pt-24' : !isLastElement, 'py-24' : isLastElement, 'max-w-7xl' : section.background,
+                      'max-w-xl' : section.items && section.itemsDisplayMode === 'extended'}"
+        class="mx-auto px-4 sm:pt-32 sm:px-6 lg:px-8 lg:max-w-7xl lg:px-8">
+        <!-- Section title -->
+        <div *ngIf="section.title"
+            [ngClass]="{'px-4 sm:px-6 sm:flex sm:items-center sm:justify-between lg:px-8 xl:px-0' : section.headerLink}">
+            <h2 [id]="section.type + '-heading'" class="text-2xl font-extrabold tracking-tight text-gray-900">
+                {{section.title}}
+            </h2>
+            <p *ngIf="section.subTitle" class="mt-4 text-base text-gray-500">
+                {{section.subTitle}}
+            </p>
+            <a *ngIf="section.headerLink" routerLink="/storeFront"
+                class="hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:block">
+                {{section.headerLink}}
+                <span aria-hidden="true"> &rarr;</span>
+            </a>
+        </div>
+        <!-- Items -->
+        <app-items-container [section]="section" [mode]="section.itemsDisplayMode"></app-items-container>
+        <!-- background image -->
+        <div *ngIf="section.background" class="relative rounded-lg overflow-hidden">
+            <div>
+                <TwicImg [src]="section.background.imageSrc" class="store-front feature style-driven-twicpics">
+                </TwicImg>
+            </div>
+            <div
+                class="absolute top-0 left-0 flex items-center w-full h-full bg-gray-900 bg-opacity-75 py-32 px-6 sm:py-40 sm:px-12 lg:px-16">
+                <div class="relative max-w-3xl mx-auto flex flex-col items-center text-center">
+                    <h2 [id]="section.type + '-heading-background'"
+                        class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+                        {{section.background.title}}
+                    </h2>
+                    <p class="mt-3 text-xl text-white">
+                        {{section.background.txt}}
+                    </p>
+                    <a routerLink="/storeFront"
+                        class="mt-8 w-full block bg-white border border-transparent rounded-md py-3 px-8 text-base font-medium text-gray-900 hover:bg-gray-100 sm:w-auto">
+                        {{section.background.buttonTxt}}
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- mobile header link -->
+        <div *ngIf="section && section.headerLink" class="mt-6 px-4 sm:hidden">
+            <a routerLink="/storeFront"
+                class="block text-sm font-semibold text-indigo-600 hover:text-indigo-500">{{section.headerLink}}
+                <span aria-hidden="true"> &rarr;</span>
+            </a>
+        </div>
+    </section>
+</ng-container>

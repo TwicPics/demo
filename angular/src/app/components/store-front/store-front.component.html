@@ -1,0 +1,52 @@
+<div class="relative bg-gray-900">
+    <!-- Decorative image and overlay -->
+    <div>
+        <TwicImg src="https://assets.twicpics.com/demo/fake-websites/homepage/home-page-01-hero-full-width.jpeg"
+            class="store-front style-driven-twicpics"></TwicImg>
+    </div>
+    <div aria-hidden="true" class="absolute inset-0 bg-gray-900 opacity-50"></div>
+    <header class="absolute z-10 top-0 w-full">
+        <app-header-main></app-header-main>
+        <nav aria-label="Top">
+            <!-- Top navigation -->
+            <div class="bg-gray-900">
+                <div class="max-w-7xl mx-auto h-10 px-4 flex items-center justify-between sm:px-6 lg:px-8">
+                    <!-- Currency selector -->
+                    <form>
+                        <div>
+                            <app-currencies currencyId="desktop-currency" theme="dark"></app-currencies>
+                        </div>
+                    </form>
+                    <div class="flex items-center space-x-6">
+                        <a routerLink="/storeFront" class="text-sm font-medium text-white hover:text-gray-100">Sign
+                            in</a>
+                        <a routerLink="/storeFront" class="text-sm font-medium text-white hover:text-gray-100">Create an
+                            account</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Secondary navigation -->
+            <app-navigation></app-navigation>
+        </nav>
+    </header>
+    <div
+        class="absolute top-0 left-0 right-0 bottom-0 max-w-3xl mx-auto py-32 pt-48 px-6 flex flex-col justify-center items-center text-center">
+        <h1 class="text-4xl font-extrabold tracking-tight text-white lg:text-6xl">
+            New arrivals are here
+        </h1>
+        <p class="mt-4 text-xl text-white">
+            The new arrivals have, well, newly arrived. Check out the latest
+            options from our summer small-batch release while they're still in
+            stock.
+        </p>
+        <a routerLink="/storeFront"
+            class="mt-8 inline-block bg-white border border-transparent rounded-md py-3 px-8 text-base font-medium text-gray-900 hover:bg-gray-100">Shop
+            New Arrivals</a>
+    </div>
+</div>
+<main>
+    <ng-container *ngFor="let section of sections; let isLast = last">
+        <app-section [section]="section" [isLastElement]="isLast"></app-section>
+    </ng-container>
+</main>
+<app-footer></app-footer>

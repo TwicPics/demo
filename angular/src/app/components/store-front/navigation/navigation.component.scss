@@ -1,0 +1,14 @@
+#mobile-menu
+{
+  transition: all 300ms ease-in-out;
+  &.open
+  {
+    opacity: 1;
+  }
+
+  &.close
+  {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}

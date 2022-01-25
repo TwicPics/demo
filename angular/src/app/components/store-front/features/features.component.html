@@ -1,0 +1,20 @@
+<div [ngClass]="{
+  'grid-cols-2 gap-x-4' : mode === 'mobile',
+  'grid-cols-4 gap-x-8 py-16' : mode !== 'mobile'
+  }"
+      class="grid gap-y-10">
+<ng-container *ngFor="let feature of category.featured">
+  <div class="group relative">
+    <div class="rounded-md overflow-hidden group-hover:opacity-75">
+      <TwicImg [src]="feature.imageSrc" [alt]="feature.imageAlt" placeholder="meancolor"></TwicImg>
+    </div>
+    <a routerLink="/storeFront"  class="mt-4 block font-medium text-gray-900">
+      <span class="absolute z-10 inset-0" aria-hidden="true"></span>
+      {{ feature.name }}
+    </a>
+    <p aria-hidden="true" class="mt-1 text-sm text-gray-500">
+      Shop now
+    </p>
+  </div>
+</ng-container>
+</div>

@@ -1,0 +1,72 @@
+<app-header-main></app-header-main>
+<ng-template [ngIf]="product">
+  <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+    <div class="lg:grid lg:grid-cols-2 lg:gap-x-8 lg:items-start">
+      <!-- Image galery-->
+      <div class="flex flex-col-reverse">
+        <!-- Image selector-->
+        <div class="hidden mt-6 w-full max-w-2xl mx-auto sm:block lg:max-w-none">
+          <div class="grid grid-cols-4 gap-6">
+              <ng-container *ngFor="let image of product.images">
+                <button
+                    class="relative aspect-w-1 aspect-h-1 bg-white rounded-md flex items-center justify-center text-sm font-medium uppercase text-gray-900 cursor-pointer hover:bg-gray-50 focus:outline-none focus:ring focus:ring-offset-4 focus:ring-opacity-50"
+                    (click)="onSelectedImage(image.id)" type="button"
+                  >
+                  <span class="sr-only">{{image.name}}</span>
+                        <span class="absolute inset-0 rounded-md overflow-hidden">
+                          <TwicImg [src]="image.src"></TwicImg>
+                        </span>
+                        <span class="absolute inset-0 rounded-md ring-2 ring-offset-2 pointer-events-none"
+                              [ngClass]="{
+                                'ring-indigo-500' : image.id === selectedImageId,
+                                'ring-transparent' : image.id !== selectedImageId
+                                }"
+                                aria-hidden="true">
+                        </span>
+                </button>
+              </ng-container>
+          </div>
+        </div>
+        <!-- Image selector end -->
+        <div class="w-full aspect-w-1 aspect-h-1">
+          <ng-container *ngFor="let image of product.images">
+            <div *ngIf="image.id === selectedImageId">
+              <TwicImg [src]="image.src" [alt]="image.alt"></TwicImg>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+
+      <!-- Image galery end -->
+      <!-- Product info -->
+      <div class="mt-10 px-4 sm:px-0 sm:mt-16 lg:mt-0">
+        <h1 class="text-3xl font-extrabold tracking-tight text-gray-900">
+          {{product.name}}
+        </h1>
+        <div class="mt-3">
+          <h2 class="sr-only">Product information</h2>
+          <p class="text-3xl text-gray-900">{{product.price}}</p>
+        </div>
+        <!-- Reviews -->
+        <div class="mt-3">
+          <h3 class="sr-only">Reviews</h3>
+          <div class="flew items-center">
+            <div class="flex items-center">
+                <ng-container *ngFor="let rating of ratings">
+                  <app-star [rating]="product.rating" [value]="rating"></app-star>
+                </ng-container>
+            </div>
+          </div>
+          <p class="sr-only">{{product.rating}} out of {{ratings.length}} stars</p>
+        </div>
+        <!-- Reviews end-->
+        <!-- Description-->
+        <div class="mt-6">
+          <h3 class="sr-only">Description</h3>
+          <div class="text-base text-gray-700 space-y-6" [innerHTML]="product.description"></div>
+        </div>
+        <!-- Description end-->
+      </div>
+    </div>
+  </div>
+</ng-template>

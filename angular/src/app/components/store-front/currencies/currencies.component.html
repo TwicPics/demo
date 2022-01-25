@@ -1,0 +1,12 @@
+<label for={{currencyId}} class="sr-only">Currency</label>
+<div [ngClass]="{'bg-gray-900' : theme === 'dark'}" class="-ml-2 group relative border-transparent rounded-md">
+  <select
+    id={{currencyId}}
+    name="currency"
+    [ngClass]="{'bg-gray-900' : theme === 'dark', 'text-white' : theme === 'dark', 'text-gray-700' : theme !== 'dark',
+     'group-hover:text-gray-100' : theme === 'dark', 'group-hover:text-gray-800' : theme !== 'dark' }"
+    class="focus:outline-none focus:ring-0 focus:border-transparent"
+  >
+    <option *ngFor="let currency of currencies" [value]="currency">{{currency}}</option>
+  </select>
+</div>

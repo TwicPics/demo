@@ -1,0 +1,44 @@
+<ng-template [ngIf]="mode==='compact'">
+    <div class="mt-4 flow-root">
+        <div class="-my-2">
+            <div class="box-content py-2 relative h-80 overflow-x-auto xl:overflow-visible">
+                <div
+                    class="absolute min-w-screen-xl px-4 flex space-x-8 sm:px-6 lg:px-8 xl:relative xl:px-0 xl:space-x-0 xl:grid xl:grid-cols-5 xl:gap-x-8">
+                    <ng-container *ngIf="section && section.items">
+                        <ng-container *ngFor="let item of section.items">
+                            <a routerLink="/storeFront"
+                                class="relative w-56 rounded-lg overflow-hidden hover:opacity-75 xl:w-auto">
+                                <TwicImg [src]="item.imageSrc" ratio="7/10"></TwicImg>
+
+                                <span aria-hidden="true"
+                                    class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 opacity-50"></span>
+                                <span
+                                    class="absolute z-10 bottom-0 mt-auto p-6 w-full text-center text-xl font-bold text-white">{{
+                                    item.name }}</span>
+                            </a>
+                        </ng-container>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+<ng-template [ngIf]="mode==='extended'">
+    <div class="mt-10 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8">
+        <ng-container *ngIf="section && section.items">
+            <ng-container *ngFor="let item of section.items">
+                <a routerLink="/storeFront" class="group block">
+                    <div aria-hidden="true" class="rounded-lg overflow-hidden group-hover:opacity-75">
+                        <TwicImg [src]="item.imageSrc" [alt]="item.imageAlt"></TwicImg>
+                    </div>
+                    <h3 class="mt-4 text-base font-semibold text-gray-900">
+                        {{ item.name }}
+                    </h3>
+                    <p class="mt-2 text-sm text-gray-500">
+                        {{ item.description }}
+                    </p>
+                </a>
+            </ng-container>
+        </ng-container>
+    </div>
+</ng-template>

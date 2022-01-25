@@ -1,0 +1,27 @@
+<div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+  <div class="md:flex md:items-center md:justify-between">
+    <h2 class="text-2xl font-extrabold tracking-tight text-gray-900">
+      {{productCategory.label}}
+    </h2>
+  </div>
+  <div [ngClass]="getProductClass()">
+    <div *ngFor="let product of productList">
+      <div  class="group relative">
+        <div class="w-full bg-gray-200 rounded-md overflow-hidden group-hover:opacity-75">
+          <TwicImg [src]="product.imageSrc" [alt]="product.imageAlt" placeholder="preview" [ratio]="getRatio()" mode="cover" focus="auto" [step]="50"></TwicImg>
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">
+          <a routerLink="/productsListing">
+            <span class="absolute inset-0"></span>
+            {{product.name}}
+          </a>
+        </h3>
+        <p class="mt-1 text-sm text-gray-500">{{product.color}}</p>
+        <p class="mt-1 text-sm font-medium text-gray-900">
+          {{product.price}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+

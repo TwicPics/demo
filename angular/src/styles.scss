@@ -1,0 +1,76 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.bg-twicpics {
+  --tw-bg-opacity: 1;
+  background-color: rgba(144, 0, 255, var(--tw-bg-opacity));
+}
+
+/* Small (xsm) */
+.style-driven-twicpics
+{
+  &.store-front
+  {
+    --twic-ratio: calc(1/2);
+    //--twic-mode: contain;
+    //--twic-position: top left;
+  }
+}
+
+
+/* Small (sm) */
+@media (min-width: 640px) {
+  .style-driven-twicpics
+  {
+     &.store-front
+     {
+       --twic-ratio: 1;
+       //--twic-mode: contain;
+       //--twic-position: top left;
+       &:hover {
+        --twic-ratio: calc(16/9);
+       }
+     }
+  }
+}
+
+/* Medium (md) */
+@media (min-width: 768px) {
+  .style-driven-twicpics
+  {
+    &.store-front
+    {
+      --twic-ratio: calc( 4/3 );
+      //--twic-mode: contain;
+      //--twic-position: top left;
+
+      &.feature
+      {
+        --twic-ratio: calc( 16/9 );
+      }
+    }
+  }
+}
+
+/* Large (lg) */
+@media (min-width: 1024px) {  }
+
+/* Extra Large (xl) */
+@media (min-width: 1280px) {
+  .style-driven-twicpics
+  {
+    &.store-front
+    {
+      --twic-ratio: calc( 16/9 );
+      //--twic-mode: contain;
+      //--twic-position: top left;
+
+      &.feature
+      {
+        --twic-ratio: calc( 2/1 );
+      }
+    }
+  }
+}

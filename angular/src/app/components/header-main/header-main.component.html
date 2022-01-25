@@ -1,0 +1,26 @@
+<div class="flex justify-center text-white bg-twicpics">
+  <h1 class="flex items-center space-x-3">
+    <img class="h-8 object-contain" src="assets/images/twicpics-logo.svg" alt="TwicPics logo" />
+    <span>x</span>
+    <img class="h-12 object-contain" src="assets/images/angular.png" alt="Angular logo" />
+  </h1>
+  <button type="button" (click)="toggleMenu()" class="absolute left-4 top-1 -ml-2 p-2 text-white align-middle">
+    <span class="sr-only">Open menu</span>
+    <!-- Heroicon name: outline/menu -->
+    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+         stroke="currentColor" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  </button>
+  <div *ngIf="menuVisible" id="menu" class="absolute left-4 top-12 w-auto bg-white shadow-xl z-20">
+    <ul class="">
+      <li *ngFor="let route of routes">
+        <a (click)="toggleMenu()" [routerLink]="'../' + route.url" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:text-purple-600 whitespace-nowrap">{{route.text}}</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+

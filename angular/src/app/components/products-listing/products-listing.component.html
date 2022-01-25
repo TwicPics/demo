@@ -1,0 +1,7 @@
+<app-header-main></app-header-main>
+<ng-container *ngFor="let category of productCategories">
+    <app-products-list
+        [productCategory]="category"
+        [productList]="getProductByCategory( category.id )">
+    </app-products-list>
+</ng-container>

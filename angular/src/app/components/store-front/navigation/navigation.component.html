@@ -1,0 +1,186 @@
+<div *ngIf="mobileMenuOpen" class="fixed inset-0 flex z-40 lg:hidden">
+  <div @inOutMobileBgAnimation id="mobile-bg" class="fixed inset-0 bg-black bg-opacity-25" aria-hidden="true"></div>
+  <div @inOutMobileAnimation class="relative max-w-xs w-full bg-white shadow-xl pb-12 flex flex-col overflow-y-auto">
+    <div class="px-4 pt-5 pb-2 flex">
+      <button (click)="toggleMenuMobile()" type="button"
+              class="-m-2 p-2 rounded-md inline-flex items-center justify-center text-gray-400">
+        <span class="sr-only">Close menu</span>
+        <!-- Heroicon name: outline/x -->
+        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+             stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Links -->
+    <ng-template [ngIf]="navigation && navigation.categories">
+      <div class="mt-2">
+        <div class="border-b border-gray-200">
+            <div class="-mb-px flex px-4 space-x-8">
+            <ng-container *ngFor="let category of navigation.categories; let index = index">
+              <button type="button" (click)="toggleMobileTab(index)"  [ngClass]="{
+                'text-indigo-600 border-indigo-600' : index === openedMobileTab,
+                'text-gray-900 border-transparent' : index !== openedMobileTab,
+                'flex-1 whitespace-nowrap py-4 px-1 border-b-2 text-base font-medium' : true
+                }"
+              >
+                {{ category.name }}
+              </button>
+            </ng-container>
+          </div>
+        </div>
+        <ng-container *ngFor="let category of navigation.categories;let index = index">
+          <div *ngIf="index === openedMobileTab" class="px-4 py-6 space-y-12">
+              <app-features [category]="category" mode="mobile"></app-features>
+          </div>
+        </ng-container>
+      </div>
+    </ng-template>
+
+    <ng-template [ngIf]="navigation && navigation.pages">
+      <div class="border-t border-gray-200 py-6 px-4 space-y-6">
+      <ng-container *ngFor="let page of navigation.pages; let isFirst = first; let index = index">
+        <div class="flow-root">
+          <a routerLink="/storeFront" class="-m-2 p-2 block font-medium text-gray-900">{{page.name}}</a>
+        </div>
+      </ng-container>
+      </div>
+    </ng-template>
+
+    <div class="border-t border-gray-200 py-6 px-4 space-y-6">
+      <div class="flow-root">
+        <a routerLink="/storeFront" class="-m-2 p-2 block font-medium text-gray-900">Create an account</a>
+      </div>
+      <div class="flow-root">
+        <a routerLink="/storeFront" class="-m-2 p-2 block font-medium text-gray-900">Sign in</a>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-200 py-6 px-4 space-y-6">
+      <!-- Currency selector -->
+      <form>
+          <div class="inline-block">
+            <app-currencies currencyId="mobile-currency" theme="white"></app-currencies>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="backdrop-blur-md backdrop-filter bg-opacity-10 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div>
+      <div class="h-16 flex items-center justify-between">
+        <!-- Logo (lg+) -->
+        <div class="hidden lg:flex-1 lg:flex lg:items-center">
+          <a routerLink="/storeFront">
+            <span class="sr-only">Workflow</span>
+            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=white"
+                 alt="">
+          </a>
+        </div>
+
+        <div class="hidden h-full lg:flex">
+          <!-- Flyout menus -->
+          <div class="px-4 bottom-0 inset-x-0">
+            <div class="h-full flex justify-center space-x-8">
+              <ng-template [ngIf]="navigation && navigation.categories">
+                <ng-container *ngFor="let category of navigation.categories; let index = index">
+                  <div class="flex">
+                    <div class="relative flex">
+                    <button type="button" (click)="toggleDesktopTab(index)" class="relative z-10 flex items-center justify-center transition-colors ease-out duration-200 text-sm font-medium text-white">
+                      {{ category.name }}
+                      <span [ngClass]="{'bg-white': index === openedDesktopTab, '' : index !== openedDesktopTab}" class="absolute -bottom-px inset-x-0 h-0.5 transition ease-out duration-200"></span>
+                    </button>
+                  </div>
+                    <div @inOutDesktopAnimation *ngIf="index === openedDesktopTab" class="absolute top-full inset-x-0 text-sm text-gray-500">
+                    <!-- Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow -->
+                    <div class="absolute inset-0 top-1/2 bg-white shadow">
+                      <div class="relative bg-white">
+                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                          <app-features [category]="category" mode="desktop"></app-features>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </ng-container>
+              </ng-template>
+              <button type="button" (click)="toggleDesktopTab(-1)" class="relative z-10 flex items-center justify-center transition-colors ease-out duration-200 text-sm font-medium text-white">
+                Company
+              </button>
+              <button type="button" (click)="toggleDesktopTab(-1)" class="relative z-10 flex items-center justify-center transition-colors ease-out duration-200 text-sm font-medium text-white">
+                Stores
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile menu and search (lg-) -->
+        <div class="flex-1 flex items-center lg:hidden">
+          <!-- Mobile menu toggle, controls the 'mobileMenuOpen' state. -->
+          <button (click)="toggleMenuMobile()" type="button" class="-ml-2 p-2 text-white">
+            <span class="sr-only">Open menu</span>
+            <!-- Heroicon name: outline/menu -->
+            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                 stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+
+          <!-- Search -->
+          <a routerLink="/storeFront"  class="ml-2 p-2 text-white">
+            <span class="sr-only">Search</span>
+            <!-- Heroicon name: outline/search -->
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                 stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Logo (lg-) -->
+        <a routerLink="/storeFront" class="lg:hidden">
+          <span class="sr-only">Workflow</span>
+          <img src="https://tailwindui.com/img/logos/workflow-mark.svg?color=white" alt="" class="h-8 w-auto">
+        </a>
+
+        <div class="flex-1 flex items-center justify-end">
+          <a routerLink="/storeFront" class="hidden text-sm font-medium text-white lg:block">
+            Search
+          </a>
+
+          <div class="flex items-center lg:ml-8">
+            <!-- Help -->
+            <a routerLink="/storeFront" class="p-2 text-white lg:hidden">
+              <span class="sr-only">Help</span>
+              <!-- Heroicon name: outline/question-mark-circle -->
+              <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                   stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </a>
+            <a routerLink="/storeFront" class="hidden text-sm font-medium text-white lg:block">Help</a>
+
+            <!-- Cart -->
+            <div class="ml-4 flow-root lg:ml-8">
+              <a routerLink="/storeFront" class="group -m-2 p-2 flex items-center">
+                <!-- Heroicon name: outline/shopping-bag -->
+                <svg class="flex-shrink-0 h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                     viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+                <span class="ml-2 text-sm font-medium text-white">0</span>
+                <span class="sr-only">items in cart, view bag</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

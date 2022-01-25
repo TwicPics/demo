@@ -1,0 +1,15 @@
+{
+    "name": "twicpics-demo-server",
+    "version": "1.0.0",
+    "description": "",
+    "dependencies": {
+        "json-server": "^0.17.0",
+        "faker": "^5.5.3"
+    },
+    "scripts": {
+        "generate": "node ./src/generate.js > ./src/database.json",
+        "server": "json-server --watch ./src/database.json",
+        "serve": "$npm_execpath install && $npm_execpath generate && $npm_execpath server"
+    },
+    "type": "module"
+}
